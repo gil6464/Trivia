@@ -1,6 +1,6 @@
 const generalData = [
   {
-    country: "Afghanistan ",
+    country: "Afghanistan",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,00",
     netMigration: "23,06",
@@ -21,7 +21,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Albania ",
+    country: "Albania",
     region: "EASTERN EUROPE                     ",
     coastline: "1,26",
     netMigration: "-4,93",
@@ -42,7 +42,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Algeria ",
+    country: "Algeria",
     region: "NORTHERN AFRICA                    ",
     coastline: "0,04",
     netMigration: "-0,39",
@@ -63,7 +63,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "American Samoa ",
+    country: "American Samoa",
     region: "OCEANIA                            ",
     coastline: "58,29",
     netMigration: "-20,71",
@@ -84,7 +84,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Andorra ",
+    country: "Andorra",
     region: "WESTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "6,6",
@@ -105,7 +105,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Angola ",
+    country: "Angola",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,13",
     netMigration: "0",
@@ -126,7 +126,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Anguilla ",
+    country: "Anguilla",
     region: "LATIN AMER. & CARIB    ",
     coastline: "59,80",
     netMigration: "10,76",
@@ -147,7 +147,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Antigua & Barbuda ",
+    country: "Antigua & Barbuda",
     region: "LATIN AMER. & CARIB    ",
     coastline: "34,54",
     netMigration: "-6,15",
@@ -168,7 +168,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Argentina ",
+    country: "Argentina",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,18",
     netMigration: "0,61",
@@ -189,7 +189,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Armenia ",
+    country: "Armenia",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-6,47",
@@ -210,7 +210,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Aruba ",
+    country: "Aruba",
     region: "LATIN AMER. & CARIB    ",
     coastline: "35,49",
     netMigration: "0",
@@ -231,7 +231,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Australia ",
+    country: "Australia",
     region: "OCEANIA                            ",
     coastline: "0,34",
     netMigration: "3,98",
@@ -252,7 +252,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Austria ",
+    country: "Austria",
     region: "WESTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "2",
@@ -273,7 +273,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Azerbaijan ",
+    country: "Azerbaijan",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-4,9",
@@ -294,7 +294,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bahamas, The ",
+    country: "Bahamas, The",
     region: "LATIN AMER. & CARIB    ",
     coastline: "25,41",
     netMigration: "-2,2",
@@ -315,7 +315,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bahrain ",
+    country: "Bahrain",
     region: "NEAR EAST                          ",
     coastline: "24,21",
     netMigration: "1,05",
@@ -336,7 +336,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bangladesh ",
+    country: "Bangladesh",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,40",
     netMigration: "-0,71",
@@ -357,7 +357,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Barbados ",
+    country: "Barbados",
     region: "LATIN AMER. & CARIB    ",
     coastline: "22,51",
     netMigration: "-0,31",
@@ -378,7 +378,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Belarus ",
+    country: "Belarus",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "2,54",
@@ -399,7 +399,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Belgium ",
+    country: "Belgium",
     region: "WESTERN EUROPE                     ",
     coastline: "0,22",
     netMigration: "1,23",
@@ -420,7 +420,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Belize ",
+    country: "Belize",
     region: "LATIN AMER. & CARIB    ",
     coastline: "1,68",
     netMigration: "0",
@@ -441,7 +441,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Benin ",
+    country: "Benin",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,11",
     netMigration: "0",
@@ -462,7 +462,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bermuda ",
+    country: "Bermuda",
     region: "NORTHERN AMERICA                   ",
     coastline: "194,34",
     netMigration: "2,49",
@@ -483,7 +483,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bhutan ",
+    country: "Bhutan",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,00",
     netMigration: "0",
@@ -504,7 +504,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bolivia ",
+    country: "Bolivia",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,00",
     netMigration: "-1,32",
@@ -525,7 +525,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bosnia & Herzegovina ",
+    country: "Bosnia & Herzegovina",
     region: "EASTERN EUROPE                     ",
     coastline: "0,04",
     netMigration: "0,31",
@@ -546,7 +546,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Botswana ",
+    country: "Botswana",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -567,7 +567,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Brazil ",
+    country: "Brazil",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,09",
     netMigration: "-0,03",
@@ -588,7 +588,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "British Virgin Is. ",
+    country: "British Virgin Is.",
     region: "LATIN AMER. & CARIB    ",
     coastline: "52,29",
     netMigration: "10,01",
@@ -609,7 +609,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Brunei ",
+    country: "Brunei",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "2,79",
     netMigration: "3,59",
@@ -630,7 +630,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Bulgaria ",
+    country: "Bulgaria",
     region: "EASTERN EUROPE                     ",
     coastline: "0,32",
     netMigration: "-4,58",
@@ -651,7 +651,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Burkina Faso ",
+    country: "Burkina Faso",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -672,7 +672,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Burma ",
+    country: "Burma",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,28",
     netMigration: "-1,8",
@@ -693,7 +693,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Burundi ",
+    country: "Burundi",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "-0,06",
@@ -714,7 +714,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cambodia ",
+    country: "Cambodia",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,24",
     netMigration: "0",
@@ -735,7 +735,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cameroon ",
+    country: "Cameroon",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,08",
     netMigration: "0",
@@ -756,7 +756,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Canada ",
+    country: "Canada",
     region: "NORTHERN AMERICA                   ",
     coastline: "2,02",
     netMigration: "5,96",
@@ -777,7 +777,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cape Verde ",
+    country: "Cape Verde",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "23,93",
     netMigration: "-12,07",
@@ -798,7 +798,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cayman Islands ",
+    country: "Cayman Islands",
     region: "LATIN AMER. & CARIB    ",
     coastline: "61,07",
     netMigration: "18,75",
@@ -819,7 +819,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Central African Rep. ",
+    country: "Central African Rep.",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -840,7 +840,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Chad ",
+    country: "Chad",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "-0,11",
@@ -861,7 +861,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Chile ",
+    country: "Chile",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,85",
     netMigration: "0",
@@ -882,7 +882,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "China ",
+    country: "China",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,15",
     netMigration: "-0,4",
@@ -903,7 +903,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Colombia ",
+    country: "Colombia",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,28",
     netMigration: "-0,31",
@@ -924,7 +924,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Comoros ",
+    country: "Comoros",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "15,67",
     netMigration: "0",
@@ -945,7 +945,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Congo, Dem. Rep. ",
+    country: "Congo, Dem. Rep.",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -966,7 +966,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Congo, Repub. of the ",
+    country: "Congo, Repub. of the",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,05",
     netMigration: "-0,17",
@@ -987,7 +987,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cook Islands ",
+    country: "Cook Islands",
     region: "OCEANIA                            ",
     coastline: "50,00",
     netMigration: null,
@@ -1008,7 +1008,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Costa Rica ",
+    country: "Costa Rica",
     region: "LATIN AMER. & CARIB    ",
     coastline: "2,52",
     netMigration: "0,51",
@@ -1029,7 +1029,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cote d'Ivoire ",
+    country: "Cote d'Ivoire",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,16",
     netMigration: "-0,07",
@@ -1050,7 +1050,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Croatia ",
+    country: "Croatia",
     region: "EASTERN EUROPE                     ",
     coastline: "10,32",
     netMigration: "1,58",
@@ -1071,7 +1071,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cuba ",
+    country: "Cuba",
     region: "LATIN AMER. & CARIB    ",
     coastline: "3,37",
     netMigration: "-1,58",
@@ -1092,7 +1092,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Cyprus ",
+    country: "Cyprus",
     region: "NEAR EAST                          ",
     coastline: "7,01",
     netMigration: "0,43",
@@ -1113,7 +1113,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Czech Republic ",
+    country: "Czech Republic",
     region: "EASTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "0,97",
@@ -1134,7 +1134,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Denmark ",
+    country: "Denmark",
     region: "WESTERN EUROPE                     ",
     coastline: "16,97",
     netMigration: "2,48",
@@ -1155,7 +1155,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Djibouti ",
+    country: "Djibouti",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "1,37",
     netMigration: "0",
@@ -1176,7 +1176,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Dominica ",
+    country: "Dominica",
     region: "LATIN AMER. & CARIB    ",
     coastline: "19,63",
     netMigration: "-13,87",
@@ -1197,7 +1197,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Dominican Republic ",
+    country: "Dominican Republic",
     region: "LATIN AMER. & CARIB    ",
     coastline: "2,64",
     netMigration: "-3,22",
@@ -1218,7 +1218,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "East Timor ",
+    country: "East Timor",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "4,70",
     netMigration: "0",
@@ -1239,7 +1239,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Ecuador ",
+    country: "Ecuador",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,79",
     netMigration: "-8,58",
@@ -1260,7 +1260,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Egypt ",
+    country: "Egypt",
     region: "NORTHERN AFRICA                    ",
     coastline: "0,24",
     netMigration: "-0,22",
@@ -1281,7 +1281,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "El Salvador ",
+    country: "El Salvador",
     region: "LATIN AMER. & CARIB    ",
     coastline: "1,46",
     netMigration: "-3,74",
@@ -1302,7 +1302,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Equatorial Guinea ",
+    country: "Equatorial Guinea",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "1,06",
     netMigration: "0",
@@ -1323,7 +1323,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Eritrea ",
+    country: "Eritrea",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "1,84",
     netMigration: "0",
@@ -1344,7 +1344,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Estonia ",
+    country: "Estonia",
     region: "BALTICS                            ",
     coastline: "8,39",
     netMigration: "-3,16",
@@ -1365,7 +1365,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Ethiopia ",
+    country: "Ethiopia",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -1386,7 +1386,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Faroe Islands ",
+    country: "Faroe Islands",
     region: "WESTERN EUROPE                     ",
     coastline: "79,84",
     netMigration: "1,41",
@@ -1407,7 +1407,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Fiji ",
+    country: "Fiji",
     region: "OCEANIA                            ",
     coastline: "6,18",
     netMigration: "-3,14",
@@ -1428,7 +1428,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Finland ",
+    country: "Finland",
     region: "WESTERN EUROPE                     ",
     coastline: "0,37",
     netMigration: "0,95",
@@ -1449,7 +1449,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "France ",
+    country: "France",
     region: "WESTERN EUROPE                     ",
     coastline: "0,63",
     netMigration: "0,66",
@@ -1470,7 +1470,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "French Guiana ",
+    country: "French Guiana",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,42",
     netMigration: "6,27",
@@ -1491,7 +1491,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "French Polynesia ",
+    country: "French Polynesia",
     region: "OCEANIA                            ",
     coastline: "60,60",
     netMigration: "2,94",
@@ -1512,7 +1512,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Gabon ",
+    country: "Gabon",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,33",
     netMigration: "0",
@@ -1533,7 +1533,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Gambia, The ",
+    country: "Gambia, The",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,71",
     netMigration: "1,57",
@@ -1554,7 +1554,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Gaza Strip ",
+    country: "Gaza Strip",
     region: "NEAR EAST                          ",
     coastline: "11,11",
     netMigration: "1,6",
@@ -1575,7 +1575,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Georgia ",
+    country: "Georgia",
     region: "C.W. OF IND. STATES ",
     coastline: "0,44",
     netMigration: "-4,7",
@@ -1596,7 +1596,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Germany ",
+    country: "Germany",
     region: "WESTERN EUROPE                     ",
     coastline: "0,67",
     netMigration: "2,18",
@@ -1617,7 +1617,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Ghana ",
+    country: "Ghana",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,23",
     netMigration: "-0,64",
@@ -1638,7 +1638,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Gibraltar ",
+    country: "Gibraltar",
     region: "WESTERN EUROPE                     ",
     coastline: "171,43",
     netMigration: "0",
@@ -1659,7 +1659,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Greece ",
+    country: "Greece",
     region: "WESTERN EUROPE                     ",
     coastline: "10,37",
     netMigration: "2,35",
@@ -1680,7 +1680,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Greenland ",
+    country: "Greenland",
     region: "NORTHERN AMERICA                   ",
     coastline: "2,04",
     netMigration: "-8,37",
@@ -1701,7 +1701,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Grenada ",
+    country: "Grenada",
     region: "LATIN AMER. & CARIB    ",
     coastline: "35,17",
     netMigration: "-13,92",
@@ -1722,7 +1722,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guadeloupe ",
+    country: "Guadeloupe",
     region: "LATIN AMER. & CARIB    ",
     coastline: "17,19",
     netMigration: "-0,15",
@@ -1743,7 +1743,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guam ",
+    country: "Guam",
     region: "OCEANIA                            ",
     coastline: "23,20",
     netMigration: "0",
@@ -1764,7 +1764,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guatemala ",
+    country: "Guatemala",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,37",
     netMigration: "-1,67",
@@ -1785,7 +1785,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guernsey ",
+    country: "Guernsey",
     region: "WESTERN EUROPE                     ",
     coastline: "64,10",
     netMigration: "3,84",
@@ -1806,7 +1806,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guinea ",
+    country: "Guinea",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,13",
     netMigration: "-3,06",
@@ -1827,7 +1827,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guinea-Bissau ",
+    country: "Guinea-Bissau",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,97",
     netMigration: "-1,57",
@@ -1848,7 +1848,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Guyana ",
+    country: "Guyana",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,21",
     netMigration: "-2,07",
@@ -1869,7 +1869,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Haiti ",
+    country: "Haiti",
     region: "LATIN AMER. & CARIB    ",
     coastline: "6,38",
     netMigration: "-3,4",
@@ -1890,7 +1890,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Honduras ",
+    country: "Honduras",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,73",
     netMigration: "-1,99",
@@ -1911,7 +1911,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Hong Kong ",
+    country: "Hong Kong",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "67,12",
     netMigration: "5,24",
@@ -1932,7 +1932,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Hungary ",
+    country: "Hungary",
     region: "EASTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "0,86",
@@ -1953,7 +1953,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Iceland ",
+    country: "Iceland",
     region: "WESTERN EUROPE                     ",
     coastline: "4,83",
     netMigration: "2,38",
@@ -1974,7 +1974,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "India ",
+    country: "India",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,21",
     netMigration: "-0,07",
@@ -1995,7 +1995,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Indonesia ",
+    country: "Indonesia",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "2,85",
     netMigration: "0",
@@ -2016,7 +2016,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Iran ",
+    country: "Iran",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,15",
     netMigration: "-0,84",
@@ -2037,7 +2037,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Iraq ",
+    country: "Iraq",
     region: "NEAR EAST                          ",
     coastline: "0,01",
     netMigration: "0",
@@ -2058,7 +2058,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Ireland ",
+    country: "Ireland",
     region: "WESTERN EUROPE                     ",
     coastline: "2,06",
     netMigration: "4,99",
@@ -2079,7 +2079,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Isle of Man ",
+    country: "Isle of Man",
     region: "WESTERN EUROPE                     ",
     coastline: "27,97",
     netMigration: "5,36",
@@ -2100,7 +2100,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Israel ",
+    country: "Israel",
     region: "NEAR EAST                          ",
     coastline: "1,31",
     netMigration: "0,68",
@@ -2121,7 +2121,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Italy ",
+    country: "Italy",
     region: "WESTERN EUROPE                     ",
     coastline: "2,52",
     netMigration: "2,07",
@@ -2142,7 +2142,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Jamaica ",
+    country: "Jamaica",
     region: "LATIN AMER. & CARIB    ",
     coastline: "9,30",
     netMigration: "-4,92",
@@ -2163,7 +2163,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Japan ",
+    country: "Japan",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "7,87",
     netMigration: "0",
@@ -2184,7 +2184,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Jersey ",
+    country: "Jersey",
     region: "WESTERN EUROPE                     ",
     coastline: "60,34",
     netMigration: "2,76",
@@ -2205,7 +2205,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Jordan ",
+    country: "Jordan",
     region: "NEAR EAST                          ",
     coastline: "0,03",
     netMigration: "6,59",
@@ -2226,7 +2226,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Kazakhstan ",
+    country: "Kazakhstan",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-3,35",
@@ -2247,7 +2247,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Kenya ",
+    country: "Kenya",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,09",
     netMigration: "-0,1",
@@ -2268,7 +2268,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Kiribati ",
+    country: "Kiribati",
     region: "OCEANIA                            ",
     coastline: "140,94",
     netMigration: "0",
@@ -2289,7 +2289,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Korea, North ",
+    country: "Korea, North",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "2,07",
     netMigration: "0",
@@ -2310,7 +2310,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Korea, South ",
+    country: "Korea, South",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "2,45",
     netMigration: "0",
@@ -2331,7 +2331,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Kuwait ",
+    country: "Kuwait",
     region: "NEAR EAST                          ",
     coastline: "2,80",
     netMigration: "14,18",
@@ -2352,7 +2352,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Kyrgyzstan ",
+    country: "Kyrgyzstan",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-2,45",
@@ -2373,7 +2373,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Laos ",
+    country: "Laos",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,00",
     netMigration: "0",
@@ -2394,7 +2394,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Latvia ",
+    country: "Latvia",
     region: "BALTICS                            ",
     coastline: "0,82",
     netMigration: "-2,23",
@@ -2415,7 +2415,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Lebanon ",
+    country: "Lebanon",
     region: "NEAR EAST                          ",
     coastline: "2,16",
     netMigration: "0",
@@ -2436,7 +2436,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Lesotho ",
+    country: "Lesotho",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "-0,74",
@@ -2457,7 +2457,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Liberia ",
+    country: "Liberia",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,52",
     netMigration: "0",
@@ -2478,7 +2478,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Libya ",
+    country: "Libya",
     region: "NORTHERN AFRICA                    ",
     coastline: "0,10",
     netMigration: "0",
@@ -2499,7 +2499,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Liechtenstein ",
+    country: "Liechtenstein",
     region: "WESTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "4,85",
@@ -2520,7 +2520,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Lithuania ",
+    country: "Lithuania",
     region: "BALTICS                            ",
     coastline: "0,14",
     netMigration: "-0,71",
@@ -2541,7 +2541,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Luxembourg ",
+    country: "Luxembourg",
     region: "WESTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "8,97",
@@ -2562,7 +2562,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Macau ",
+    country: "Macau",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "146,43",
     netMigration: "4,86",
@@ -2583,7 +2583,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Macedonia ",
+    country: "Macedonia",
     region: "EASTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "-1,45",
@@ -2604,7 +2604,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Madagascar ",
+    country: "Madagascar",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,82",
     netMigration: "0",
@@ -2625,7 +2625,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Malawi ",
+    country: "Malawi",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -2646,7 +2646,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Malaysia ",
+    country: "Malaysia",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "1,42",
     netMigration: "0",
@@ -2667,7 +2667,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Maldives ",
+    country: "Maldives",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "214,67",
     netMigration: "0",
@@ -2688,7 +2688,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mali ",
+    country: "Mali",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "-0,33",
@@ -2709,7 +2709,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Malta ",
+    country: "Malta",
     region: "WESTERN EUROPE                     ",
     coastline: "62,28",
     netMigration: "2,07",
@@ -2730,7 +2730,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Marshall Islands ",
+    country: "Marshall Islands",
     region: "OCEANIA                            ",
     coastline: "3,12",
     netMigration: "-6,04",
@@ -2751,7 +2751,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Martinique ",
+    country: "Martinique",
     region: "LATIN AMER. & CARIB    ",
     coastline: "31,82",
     netMigration: "-0,05",
@@ -2772,7 +2772,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mauritania ",
+    country: "Mauritania",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,07",
     netMigration: "0",
@@ -2793,7 +2793,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mauritius ",
+    country: "Mauritius",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "8,68",
     netMigration: "-0,9",
@@ -2814,7 +2814,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mayotte ",
+    country: "Mayotte",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "49,52",
     netMigration: "6,78",
@@ -2835,7 +2835,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mexico ",
+    country: "Mexico",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,47",
     netMigration: "-4,87",
@@ -2856,7 +2856,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Micronesia, Fed. St. ",
+    country: "Micronesia, Fed. St.",
     region: "OCEANIA                            ",
     coastline: "870,66",
     netMigration: "-20,99",
@@ -2877,7 +2877,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Moldova ",
+    country: "Moldova",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-0,26",
@@ -2898,7 +2898,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Monaco ",
+    country: "Monaco",
     region: "WESTERN EUROPE                     ",
     coastline: "205,00",
     netMigration: "7,75",
@@ -2919,7 +2919,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mongolia ",
+    country: "Mongolia",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,00",
     netMigration: "0",
@@ -2940,7 +2940,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Montserrat ",
+    country: "Montserrat",
     region: "LATIN AMER. & CARIB    ",
     coastline: "39,22",
     netMigration: "0",
@@ -2961,7 +2961,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Morocco ",
+    country: "Morocco",
     region: "NORTHERN AFRICA                    ",
     coastline: "0,41",
     netMigration: "-0,98",
@@ -2982,7 +2982,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Mozambique ",
+    country: "Mozambique",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,31",
     netMigration: "0",
@@ -3003,7 +3003,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Namibia ",
+    country: "Namibia",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,19",
     netMigration: "0",
@@ -3024,7 +3024,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Nauru ",
+    country: "Nauru",
     region: "OCEANIA                            ",
     coastline: "142,86",
     netMigration: "0",
@@ -3045,7 +3045,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Nepal ",
+    country: "Nepal",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,00",
     netMigration: "0",
@@ -3066,7 +3066,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Netherlands ",
+    country: "Netherlands",
     region: "WESTERN EUROPE                     ",
     coastline: "1,09",
     netMigration: "2,91",
@@ -3087,7 +3087,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Netherlands Antilles ",
+    country: "Netherlands Antilles",
     region: "LATIN AMER. & CARIB    ",
     coastline: "37,92",
     netMigration: "-0,41",
@@ -3108,7 +3108,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "New Caledonia ",
+    country: "New Caledonia",
     region: "OCEANIA                            ",
     coastline: "11,83",
     netMigration: "0",
@@ -3129,7 +3129,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "New Zealand ",
+    country: "New Zealand",
     region: "OCEANIA                            ",
     coastline: "5,63",
     netMigration: "4,05",
@@ -3150,7 +3150,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Nicaragua ",
+    country: "Nicaragua",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,70",
     netMigration: "-1,22",
@@ -3171,7 +3171,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Niger ",
+    country: "Niger",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "-0,67",
@@ -3192,7 +3192,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Nigeria ",
+    country: "Nigeria",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,09",
     netMigration: "0,26",
@@ -3213,7 +3213,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "N. Mariana Islands ",
+    country: "N. Mariana Islands",
     region: "OCEANIA                            ",
     coastline: "310,69",
     netMigration: "9,61",
@@ -3234,7 +3234,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Norway ",
+    country: "Norway",
     region: "WESTERN EUROPE                     ",
     coastline: "7,77",
     netMigration: "1,74",
@@ -3255,7 +3255,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Oman ",
+    country: "Oman",
     region: "NEAR EAST                          ",
     coastline: "0,98",
     netMigration: "0,28",
@@ -3276,7 +3276,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Pakistan ",
+    country: "Pakistan",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,13",
     netMigration: "-2,77",
@@ -3297,7 +3297,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Palau ",
+    country: "Palau",
     region: "OCEANIA                            ",
     coastline: "331,66",
     netMigration: "2,85",
@@ -3318,7 +3318,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Panama ",
+    country: "Panama",
     region: "LATIN AMER. & CARIB    ",
     coastline: "3,18",
     netMigration: "-0,91",
@@ -3339,7 +3339,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Papua New Guinea ",
+    country: "Papua New Guinea",
     region: "OCEANIA                            ",
     coastline: "1,11",
     netMigration: "0",
@@ -3360,7 +3360,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Paraguay ",
+    country: "Paraguay",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,00",
     netMigration: "-0,08",
@@ -3381,7 +3381,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Peru ",
+    country: "Peru",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,19",
     netMigration: "-1,05",
@@ -3402,7 +3402,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Philippines ",
+    country: "Philippines",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "12,10",
     netMigration: "-1,5",
@@ -3423,7 +3423,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Poland ",
+    country: "Poland",
     region: "EASTERN EUROPE                     ",
     coastline: "0,16",
     netMigration: "-0,49",
@@ -3444,7 +3444,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Portugal ",
+    country: "Portugal",
     region: "WESTERN EUROPE                     ",
     coastline: "1,94",
     netMigration: "3,57",
@@ -3465,7 +3465,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Puerto Rico ",
+    country: "Puerto Rico",
     region: "LATIN AMER. & CARIB    ",
     coastline: "3,63",
     netMigration: "-1,46",
@@ -3486,7 +3486,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Qatar ",
+    country: "Qatar",
     region: "NEAR EAST                          ",
     coastline: "4,92",
     netMigration: "16,29",
@@ -3507,7 +3507,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Reunion ",
+    country: "Reunion",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "8,22",
     netMigration: "0",
@@ -3528,7 +3528,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Romania ",
+    country: "Romania",
     region: "EASTERN EUROPE                     ",
     coastline: "0,09",
     netMigration: "-0,13",
@@ -3549,7 +3549,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Russia ",
+    country: "Russia",
     region: "C.W. OF IND. STATES ",
     coastline: "0,22",
     netMigration: "1,02",
@@ -3570,7 +3570,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Rwanda ",
+    country: "Rwanda",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -3591,7 +3591,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Saint Helena ",
+    country: "Saint Helena",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "14,53",
     netMigration: "0",
@@ -3612,7 +3612,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Saint Kitts & Nevis ",
+    country: "Saint Kitts & Nevis",
     region: "LATIN AMER. & CARIB    ",
     coastline: "51,72",
     netMigration: "-7,11",
@@ -3633,7 +3633,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Saint Lucia ",
+    country: "Saint Lucia",
     region: "LATIN AMER. & CARIB    ",
     coastline: "25,65",
     netMigration: "-2,67",
@@ -3654,7 +3654,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "St Pierre & Miquelon ",
+    country: "St Pierre & Miquelon",
     region: "NORTHERN AMERICA                   ",
     coastline: "49,59",
     netMigration: "-4,86",
@@ -3675,7 +3675,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Saint Vincent and the Grenadines ",
+    country: "Saint Vincent and the Grenadines",
     region: "LATIN AMER. & CARIB    ",
     coastline: "21,59",
     netMigration: "-7,64",
@@ -3696,7 +3696,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Samoa ",
+    country: "Samoa",
     region: "OCEANIA                            ",
     coastline: "13,69",
     netMigration: "-11,7",
@@ -3717,7 +3717,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "San Marino ",
+    country: "San Marino",
     region: "WESTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "10,98",
@@ -3738,7 +3738,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Sao Tome & Principe ",
+    country: "Sao Tome & Principe",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "20,88",
     netMigration: "-2,72",
@@ -3759,7 +3759,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Saudi Arabia ",
+    country: "Saudi Arabia",
     region: "NEAR EAST                          ",
     coastline: "0,13",
     netMigration: "-2,71",
@@ -3780,7 +3780,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Senegal ",
+    country: "Senegal",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,27",
     netMigration: "0,2",
@@ -3801,7 +3801,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Serbia ",
+    country: "Serbia",
     region: "EASTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "-1,33",
@@ -3822,7 +3822,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Seychelles ",
+    country: "Seychelles",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "107,91",
     netMigration: "-5,69",
@@ -3843,7 +3843,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Sierra Leone ",
+    country: "Sierra Leone",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,56",
     netMigration: "0",
@@ -3864,7 +3864,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Singapore ",
+    country: "Singapore",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "27,85",
     netMigration: "11,53",
@@ -3885,7 +3885,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Slovakia ",
+    country: "Slovakia",
     region: "EASTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "0,3",
@@ -3906,7 +3906,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Slovenia ",
+    country: "Slovenia",
     region: "EASTERN EUROPE                     ",
     coastline: "0,23",
     netMigration: "1,12",
@@ -3927,7 +3927,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Solomon Islands ",
+    country: "Solomon Islands",
     region: "OCEANIA                            ",
     coastline: "18,67",
     netMigration: "0",
@@ -3948,7 +3948,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Somalia ",
+    country: "Somalia",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,47",
     netMigration: "5,37",
@@ -3969,7 +3969,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "South Africa ",
+    country: "South Africa",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,23",
     netMigration: "-0,29",
@@ -3990,7 +3990,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Spain ",
+    country: "Spain",
     region: "WESTERN EUROPE                     ",
     coastline: "0,98",
     netMigration: "0,99",
@@ -4011,7 +4011,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Sri Lanka ",
+    country: "Sri Lanka",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "2,04",
     netMigration: "-1,31",
@@ -4032,7 +4032,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Sudan ",
+    country: "Sudan",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,03",
     netMigration: "-0,02",
@@ -4053,7 +4053,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Suriname ",
+    country: "Suriname",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,24",
     netMigration: "-8,81",
@@ -4074,7 +4074,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Swaziland ",
+    country: "Swaziland",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -4095,7 +4095,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Sweden ",
+    country: "Sweden",
     region: "WESTERN EUROPE                     ",
     coastline: "0,72",
     netMigration: "1,67",
@@ -4116,7 +4116,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Switzerland ",
+    country: "Switzerland",
     region: "WESTERN EUROPE                     ",
     coastline: "0,00",
     netMigration: "4,05",
@@ -4137,7 +4137,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Syria ",
+    country: "Syria",
     region: "NEAR EAST                          ",
     coastline: "0,10",
     netMigration: "0",
@@ -4158,7 +4158,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Taiwan ",
+    country: "Taiwan",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "4,35",
     netMigration: "0",
@@ -4179,7 +4179,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Tajikistan ",
+    country: "Tajikistan",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-2,86",
@@ -4200,7 +4200,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Tanzania ",
+    country: "Tanzania",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,15",
     netMigration: "-2,06",
@@ -4221,7 +4221,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Thailand ",
+    country: "Thailand",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "0,63",
     netMigration: "0",
@@ -4242,7 +4242,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Togo ",
+    country: "Togo",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,10",
     netMigration: "0",
@@ -4263,7 +4263,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Tonga ",
+    country: "Tonga",
     region: "OCEANIA                            ",
     coastline: "56,02",
     netMigration: "0",
@@ -4284,7 +4284,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Trinidad & Tobago ",
+    country: "Trinidad & Tobago",
     region: "LATIN AMER. & CARIB    ",
     coastline: "7,06",
     netMigration: "-10,83",
@@ -4305,7 +4305,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Tunisia ",
+    country: "Tunisia",
     region: "NORTHERN AFRICA                    ",
     coastline: "0,70",
     netMigration: "-0,57",
@@ -4326,7 +4326,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Turkey ",
+    country: "Turkey",
     region: "NEAR EAST                          ",
     coastline: "0,92",
     netMigration: "0",
@@ -4347,7 +4347,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Turkmenistan ",
+    country: "Turkmenistan",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-0,86",
@@ -4368,7 +4368,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Turks & Caicos Is ",
+    country: "Turks & Caicos Is",
     region: "LATIN AMER. & CARIB    ",
     coastline: "90,47",
     netMigration: "11,68",
@@ -4389,7 +4389,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Tuvalu ",
+    country: "Tuvalu",
     region: "OCEANIA                            ",
     coastline: "92,31",
     netMigration: "0",
@@ -4410,7 +4410,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Uganda ",
+    country: "Uganda",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -4431,7 +4431,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Ukraine ",
+    country: "Ukraine",
     region: "C.W. OF IND. STATES ",
     coastline: "0,46",
     netMigration: "-0,39",
@@ -4452,7 +4452,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "United Arab Emirates ",
+    country: "United Arab Emirates",
     region: "NEAR EAST                          ",
     coastline: "1,59",
     netMigration: "1,03",
@@ -4473,7 +4473,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "United Kingdom ",
+    country: "United Kingdom",
     region: "WESTERN EUROPE                     ",
     coastline: "5,08",
     netMigration: "2,19",
@@ -4494,7 +4494,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "United States ",
+    country: "United States",
     region: "NORTHERN AMERICA                   ",
     coastline: "0,21",
     netMigration: "3,41",
@@ -4515,7 +4515,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Uruguay ",
+    country: "Uruguay",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,37",
     netMigration: "-0,32",
@@ -4536,7 +4536,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Uzbekistan ",
+    country: "Uzbekistan",
     region: "C.W. OF IND. STATES ",
     coastline: "0,00",
     netMigration: "-1,72",
@@ -4557,7 +4557,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Vanuatu ",
+    country: "Vanuatu",
     region: "OCEANIA                            ",
     coastline: "20,72",
     netMigration: "0",
@@ -4578,7 +4578,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Venezuela ",
+    country: "Venezuela",
     region: "LATIN AMER. & CARIB    ",
     coastline: "0,31",
     netMigration: "-0,04",
@@ -4599,7 +4599,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Vietnam ",
+    country: "Vietnam",
     region: "ASIA (EX. NEAR EAST)         ",
     coastline: "1,05",
     netMigration: "-0,45",
@@ -4620,7 +4620,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Virgin Islands ",
+    country: "Virgin Islands",
     region: "LATIN AMER. & CARIB    ",
     coastline: "9,84",
     netMigration: "-8,94",
@@ -4641,7 +4641,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Wallis and Futuna ",
+    country: "Wallis and Futuna",
     region: "OCEANIA                            ",
     coastline: "47,08",
     netMigration: null,
@@ -4662,7 +4662,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "West Bank ",
+    country: "West Bank",
     region: "NEAR EAST                          ",
     coastline: "0,00",
     netMigration: "2,98",
@@ -4683,7 +4683,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Western Sahara ",
+    country: "Western Sahara",
     region: "NORTHERN AFRICA                    ",
     coastline: "0,42",
     netMigration: null,
@@ -4704,7 +4704,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Yemen ",
+    country: "Yemen",
     region: "NEAR EAST                          ",
     coastline: "0,36",
     netMigration: "0",
@@ -4725,7 +4725,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Zambia ",
+    country: "Zambia",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -4746,7 +4746,7 @@ const generalData = [
     updatedAt: new Date(),
   },
   {
-    country: "Zimbabwe ",
+    country: "Zimbabwe",
     region: "SUB-SAHARAN AFRICA                 ",
     coastline: "0,00",
     netMigration: "0",
@@ -4767,8 +4767,8 @@ const generalData = [
     updatedAt: new Date(),
   },
 ];
-const filter = (array) => {
-  const newArray = array.map((country) => {
+const filter = array => {
+  const newArray = array.map(country => {
     if (typeof country.coastline === "string") {
       country.coastline = country.coastline.replace(/\$|,/g, "");
     }
