@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class countryAgeStructure extends Model {
     /**
@@ -12,15 +10,18 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
-  countryAgeStructure.init({
-    country: DataTypes.STRING,
-    age0To14: DataTypes.INTEGER,
-    age15To65: DataTypes.INTEGER,
-    age65AndAbove: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'countryAgeStructure',
-  });
+  }
+  countryAgeStructure.init(
+    {
+      country: DataTypes.STRING,
+      age0To14: DataTypes.INTEGER,
+      age15To64: DataTypes.INTEGER,
+      age65AndAbove: DataTypes.INTEGER,
+    },
+    {
+      sequelize,
+      modelName: "countryAgeStructure",
+    }
+  );
   return countryAgeStructure;
 };
