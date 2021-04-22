@@ -3,45 +3,24 @@ const Sequelize = require("Sequelize");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
 const express = require("express");
-const cors = require("cors");
 const app = express();
-app.use(cors());
 const router = express.Router();
+const cors = require("cors");
+app.use(cors());
 
-// Get country that name is Switzerland
-// countryMain.findOne({ where: { country: "Switzerland" } }).then(country => {
-//   console.log(country.toJSON());
-// });
+const countries = require("./api/countries");
+const typeOne = require("./api/typeOne");
+const typeTwo = require("./api/typeTwo");
 
-// Get country that GDP > 35000
-const answar = async () => {
-  await countryMain
-    .findAll({ where: { GDP: { [Op.gte]: 35000 } } })
-    .then(countries => {
-      return countries.map(country => country.toJSON());
-    });
-};
+app.use("/countries", countries);
+app.use("/typeOne", typeOne);
+app.use("/typeTwo", typeTwo);
 
-app.get("/question/typeone", (req, res) => {
-  const questions = questiontypeone
-    .findOne({ where: { id: Math.floor(Math.random() * 10) + 1 } })
-    .then(question => {
-      res.send(question.toJSON());
-    });
-});
-
-// countryMain.findAll({ order: Sequelize.literal('rand()'), limit: 5 }).then((countries) => {
-//   // single random encounter
-// });
-
-// order: [["price", "DESC"]],
-//   limit: 1,
-// { order: Sequelize.literal('rand()'), limit: 4 }
 // function createQuestion() {
 //   let country1 = getRandomCountry();
 //   let country2 = getRandomCountry();
 //   if (country1 === country2) {
-//     //If they are the same then shuffle them both
+//If they are the same then shuffle them both
 //     country1 = getRandomCountry();
 //     country2 = getRandomCountry();
 //   }
