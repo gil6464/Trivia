@@ -7,13 +7,15 @@ const app = express();
 const router = express.Router();
 const cors = require("cors");
 app.use(cors());
+app.use(express.json());
 
+const SavedQuestion = require("./api/SavedQuestion");
 const typeOne = require("./api/typeOne");
 const typeTwo = require("./api/typeTwo");
 
 app.use("/typeOne", typeOne);
 app.use("/typeTwo", typeTwo);
-
+app.use("/savedQuestion", SavedQuestion);
 app.listen(3000, () => {
   console.log("Listening on port 3000!");
 });
