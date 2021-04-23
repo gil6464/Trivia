@@ -31,7 +31,7 @@ module.exports = {
         },
         {
           template: "What is the cost of living index of",
-          column: "costofLivingIndex",
+          column: "qualityOfLifeIndex",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
