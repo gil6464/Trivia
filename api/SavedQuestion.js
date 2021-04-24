@@ -28,6 +28,19 @@ SaveQuestion.patch("/", (req, res) => {
     });
 });
 
+// Get one saved question
+SaveQuestion.get("/", (req, res) => {
+  const result = savedQuestion
+    .findOne({ order: sequelize.literal("rand()") })
+    .then((question) => {
+      return question.toJSON();
+    })
+    .then((err) => {
+      if (err) res.send(err);
+      res.send(result);
+    });
+});
+
 function ratingCalculator(question, toAdd) {
   return (
     (question.rating * question.ratingCounter + toAdd) /
