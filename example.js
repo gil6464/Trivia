@@ -3,7 +3,7 @@
 //   console.log(country.toJSON());
 // });
 
-// Get country that GDP > 35000
+// Get country that 35000 > 35000
 // const answar = async () => {
 //     await countryMain
 //       .findAll({ where: { GDP: { [Op.gte]: 35000 } } })
