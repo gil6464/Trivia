@@ -94,16 +94,18 @@ let mockQ = {
   correct: "Canada",
 };
 
-function TypeOne({ updateCounter, updateCounterIncorrect }) {
+function TypeOne({ updateCounter, updateCounterIncorrect, setQuestion }) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const correctWrapper = () => {
     correct();
     updateCounter();
+    setQuestion(1);
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
+    setQuestion(1);
   };
 
   let buttonArray = [];
