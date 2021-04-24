@@ -4,22 +4,25 @@ const typeTwo = express.Router();
 const Sequelize = require("Sequelize");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
+
 let countries;
+
 typeTwo.get("/", async (req, res) => {
   const result = await questiontypetwo
     .findOne({ order: sequelize.literal("rand()") })
-    .then((question) => {
+    .then(question => {
       return question.toJSON();
     });
   let notNull = false;
   while (!notNull) {
     countries = await countryMain
       .findAll({ order: sequelize.literal("rand()"), limit: 4 })
-      .then((countrys) => {
-        return countrys.map((country) => country.toJSON());
+      .then(countrys => {
+        return countrys.map(country => country.toJSON());
       });
-    const answers = countries.map((answer) => answer[result.column]);
-    if (!answers.includes(null)) {
+    const answers = countries.map(answer => answer[result.column]);
+    const noDuplicates = new Set(answers).size === 4;
+    if (!answers.includes(null) && noDuplicates) {
       notNull = true;
     }
   }
