@@ -3,8 +3,9 @@ import TypeTwo from "../questions/TypeTwo";
 import SavedQuestion from "../questions/SavedQuestion";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import GameOver from "../gameOver/GameOver";
 
-function Home() {
+function Home({ player, setPlayer }) {
   const [questionType, setQuestionType] = useState(0);
   const [question, setQuestion] = useState({});
   const [count, setCount] = useState(0);
@@ -12,18 +13,27 @@ function Home() {
 
   const updateCounter = () => {
     setCount(count + 1);
+    setPlayer({
+      name: player.name,
+      score: player.score + 100,
+      correct: player.correct + 1,
+      mistakes: player.mistakes,
+    });
+    console.log(player);
   };
 
   const updateCounterIncorrect = () => {
     setIncorrectCount(incorrectCount + 1);
+    setPlayer({
+      name: player.name,
+      score: player.score,
+      correct: player.correct,
+      mistakes: player.mistakes + 1,
+    });
   };
 
-  useEffect(() => {
-    // setQuestion(questionArray);
-  }, []);
-
   let currentQuestion;
-  if (questionType == 0) {
+  if (questionType === 0) {
     currentQuestion = (
       <TypeOne
         updateCounter={updateCounter}
@@ -33,7 +43,7 @@ function Home() {
     );
   }
 
-  if (questionType == 1) {
+  if (questionType === 1) {
     currentQuestion = (
       <TypeTwo
         updateCounter={updateCounter}
@@ -43,7 +53,7 @@ function Home() {
     );
   }
 
-  if (questionType == 2) {
+  if (questionType === 2) {
     currentQuestion = (
       <SavedQuestion
         updateCounter={updateCounter}
@@ -52,19 +62,19 @@ function Home() {
       />
     );
   }
-
-  return (
-    <div id="Login">
-      <h1 id="Login-Header">Home page</h1>
-      <h1>Correct answers: {count}</h1>
-      <h1>Incorrect answers: {incorrectCount}</h1>
-      <h1>question number: {incorrectCount + count}</h1>
-      {currentQuestion}
-    </div>
-  );
+  if (player.mistakes < 3) {
+    return (
+      <div id="Login">
+        <h1>{player.name}</h1>
+        <h2>Your Score is: {player.score}</h2>
+        <h1>Correct answers: {player.correct}</h1>
+        <h1>Incorrect answers: {player.mistakes}</h1>
+        <h1>question number: {player.correct + player.mistakes}</h1>
+        {currentQuestion}
+      </div>
+    );
+  } else return <GameOver currentPlayer={player} />;
 }
-
-const constructQuestions = () => {};
 
 const getTypeTwoQuestion = () => {
   axios.get("/typetwo").then((response) => {
