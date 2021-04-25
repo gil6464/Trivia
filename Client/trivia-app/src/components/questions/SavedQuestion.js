@@ -7,6 +7,7 @@ function SavedQuestion({
   setQuestionType,
 }) {
   const [question, setQuestion] = useState(undefined);
+  const [rated, setRated] = useState(false);
 
   const getSavedQuestions = async () => {
     const { data } = await axios.get("/savedquestion");
@@ -52,7 +53,12 @@ function SavedQuestion({
       }
     }
 
-    let buttons = getButtonList(question.id);
+    let buttons;
+    if (!rated) {
+      buttons = getButtonList(question.id, setRated);
+    } else {
+      buttons = <h1>Thank you for rating</h1>;
+    }
 
     return (
       <div className="TypeOne">
@@ -70,22 +76,22 @@ function SavedQuestion({
   }
 }
 //getting list of buttons
-const getButtonList = (id) => {
+const getButtonList = (id, setRated) => {
   let buttonList = [];
   buttonList.push(
-    <button key={getNewKey()} onClick={() => rateQuestion(1, id)}>
+    <button key={getNewKey()} onClick={() => rateQuestion(1, id, setRated)}>
       1
     </button>,
-    <button key={getNewKey()} onClick={() => rateQuestion(2, id)}>
+    <button key={getNewKey()} onClick={() => rateQuestion(2, id, setRated)}>
       2
     </button>,
-    <button key={getNewKey()} onClick={() => rateQuestion(3, id)}>
+    <button key={getNewKey()} onClick={() => rateQuestion(3, id, setRated)}>
       3
     </button>,
-    <button key={getNewKey()} onClick={() => rateQuestion(4, id)}>
+    <button key={getNewKey()} onClick={() => rateQuestion(4, id, setRated)}>
       4
     </button>,
-    <button key={getNewKey()} onClick={() => rateQuestion(5, id)}>
+    <button key={getNewKey()} onClick={() => rateQuestion(5, id, setRated)}>
       5
     </button>
   );
@@ -104,8 +110,9 @@ const getNewKey = () => {
   return 1000000 + Math.floor(Math.random() * 9000000);
 };
 
-const rateQuestion = async (rate, id) => {
+const rateQuestion = async (rate, id, setRated) => {
   const { data } = await axios.patch("/savedquestion", { id: id, rate: rate });
+  setRated(true);
 };
 
 export default SavedQuestion;
