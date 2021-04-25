@@ -16,7 +16,7 @@ const user = require("./api/user");
 
 app.use("/typeOne", typeOne);
 app.use("/typeTwo", typeTwo);
-
+app.use("/savedquestion", SavedQuestion);
 
 app.listen(3001, () => {
   console.log("Listening on port 3001!");
