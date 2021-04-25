@@ -1,4 +1,5 @@
 const mockArray = [
+
 	{
 		name: "Gil",
 		score: 6531,
@@ -37,11 +38,15 @@ const getScore = () => {
 		</li>
 	));
 	return scoresArray;
+
+
 };
 
 //Each LI element in react must have a key with a unique id, if not an error will occur
 const getNewKey = () => {
+
 	return 1000000 + Math.floor(Math.random() * 9000000);
+ 
 };
 
 export default Leaderboard;
