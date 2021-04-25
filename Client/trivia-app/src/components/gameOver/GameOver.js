@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function GameOver({ currentPlayer }) {
   const [leaderBoard, setLeaderBoard] = useState([]);
@@ -8,26 +8,34 @@ function GameOver({ currentPlayer }) {
     const { data } = await axios.get("/user/leaderboard");
     setLeaderBoard(data);
   };
-  getLeaderboard();
-  const postUser = async (user) => {
+  useEffect(() => {
+    getLeaderboard();
+  }, []);
+
+  const postUser = async user => {
     await axios.post("/user", { name: user.name, score: user.score });
     setPosted(true);
     getLeaderboard();
   };
   return (
     <div>
-      <h1>
-        {currentPlayer.name} You scored: {currentPlayer.score} points!
-      </h1>
-      {!isPosted && (
-        <button
-          onClick={() => {
-            postUser(currentPlayer);
-          }}
-        >
-          Post your Score!
-        </button>
+      {currentPlayer && (
+        <div>
+          <h1>
+            {currentPlayer.name} You scored: {currentPlayer.score} points!
+          </h1>
+          {!isPosted && (
+            <button
+              onClick={() => {
+                postUser(currentPlayer);
+              }}
+            >
+              Post your Score!
+            </button>
+          )}
+        </div>
       )}
+
       <table>
         <thead>
           <h1>Leaderboard</h1>

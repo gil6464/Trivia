@@ -27,7 +27,7 @@ function Navbar() {
             <Login setPlayer={setPlayer} />
           </Route>
           <Route exact path="/leaderboard">
-            <GameOver currentPlayer={{ name: "", score: 0 }} />
+            <GameOver currentPlayer={undefined} />
           </Route>
           <Route exact path="/game">
             <Home player={player} setPlayer={setPlayer} />
