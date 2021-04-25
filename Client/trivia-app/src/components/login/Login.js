@@ -12,7 +12,10 @@ function Login({ setPlayer }) {
         <input type="text" placeholder="Username" ref={UserName} required />
         <button
           type="submit"
-          onClick={(e) => {
+          onClick={e => {
+            if (!UserName.current.value) {
+              return;
+            }
             setPlayer({
               name: UserName.current.value,
               score: 0,

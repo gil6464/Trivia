@@ -78,6 +78,7 @@ function SavedQuestion({
 //getting list of buttons
 const getButtonList = (id, setRated) => {
   let buttonList = [];
+  buttonList.push(<h3 key={getNewKey()}>Rate this question!</h3>);
   buttonList.push(
     <button key={getNewKey()} onClick={() => rateQuestion(1, id, setRated)}>
       1
@@ -99,11 +100,11 @@ const getButtonList = (id, setRated) => {
 };
 // {key={getNewKey()}
 const correct = () => {
-  console.log("correct");
+  //Add correct functionallity
 };
 
 const inCorrect = () => {
-  console.log("inCorrect");
+  //Add incorrect functionallity
 };
 
 const getNewKey = () => {
@@ -111,7 +112,7 @@ const getNewKey = () => {
 };
 
 const rateQuestion = async (rate, id, setRated) => {
-  const { data } = await axios.patch("/savedquestion", { id: id, rate: rate });
+  await axios.patch("/savedquestion", { id: id, rate: rate });
   setRated(true);
 };
 

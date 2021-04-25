@@ -7,12 +7,10 @@ function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
 
   const getTypeOneQuestion = async () => {
     const { data } = await axios.get("/typeone");
-    console.log(data);
     setQuestion(data);
   };
 
   useEffect(() => {
-    console.log("did mount");
     getTypeOneQuestion();
   }, []);
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
@@ -69,11 +67,11 @@ function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
 }
 
 const correct = () => {
-  console.log("correct");
+  //Add correct functionallity
 };
 
 const inCorrect = () => {
-  console.log("inCorrect");
+  //Add incorrect functionallity
 };
 
 const getNewKey = () => {
@@ -81,7 +79,7 @@ const getNewKey = () => {
 };
 
 const rateQuestion = async (rate, question, setRated) => {
-  const { data } = await axios.post("/savedquestion", {
+  await axios.post("/savedquestion", {
     question: question.template,
     column: question.column,
     correct: question.correct,
@@ -97,6 +95,7 @@ const rateQuestion = async (rate, question, setRated) => {
 
 const getButtonList = (question, setRated) => {
   let buttonList = [];
+  buttonList.push(<h3 key={getNewKey()}>Rate this question!</h3>);
   buttonList.push(
     <button
       key={getNewKey()}

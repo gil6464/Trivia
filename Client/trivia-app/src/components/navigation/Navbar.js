@@ -1,8 +1,7 @@
 import Login from "../login/Login";
-import Leaderboard from "../leaderboard/Leaderboard";
 import GameOver from "../gameOver/GameOver";
 import Home from "../home/Home";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Navbar.css";
 

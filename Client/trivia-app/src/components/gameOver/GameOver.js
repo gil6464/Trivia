@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 function GameOver({ currentPlayer }) {
   const [leaderBoard, setLeaderBoard] = useState([]);
   const [isPosted, setPosted] = useState(false);
+
   const getLeaderboard = async () => {
     const { data } = await axios.get("/user/leaderboard");
     setLeaderBoard(data);
@@ -24,6 +25,7 @@ function GameOver({ currentPlayer }) {
           <h1>
             {currentPlayer.name} You scored: {currentPlayer.score} points!
           </h1>
+          <p>{currentPlayer.name}, You are the weakest link</p>
           {!isPosted && (
             <button
               onClick={() => {
@@ -38,11 +40,15 @@ function GameOver({ currentPlayer }) {
 
       <table>
         <thead>
-          <h1>Leaderboard</h1>
+          <tr>
+            <th>Leaderboard</th>
+          </tr>
         </thead>
         <tbody>
-          <th>Name</th>
-          <th>score</th>
+          <tr>
+            <th>Name</th>
+            <th>score</th>
+          </tr>
           {leaderBoard.map((user, i) => {
             return (
               <tr key={i}>
