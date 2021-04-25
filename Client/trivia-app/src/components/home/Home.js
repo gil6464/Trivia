@@ -69,7 +69,7 @@ function Home({ player, setPlayer }) {
         <h2>Your Score is: {player.score}</h2>
         <h1>Correct answers: {player.correct}</h1>
         <h1>Incorrect answers: {player.mistakes}</h1>
-        <h1>question number: {player.correct + player.mistakes}</h1>
+        <h1>question number: {player.correct + player.mistakes + 1}</h1>
         {currentQuestion}
       </div>
     );
@@ -77,13 +77,13 @@ function Home({ player, setPlayer }) {
 }
 
 const getTypeTwoQuestion = () => {
-  axios.get("/typetwo").then((response) => {
+  axios.get("/typetwo").then(response => {
     return response.data;
   });
 };
 
 const getSavedQuestion = () => {
-  axios.get("/savedquestion").then((response) => {
+  axios.get("/savedquestion").then(response => {
     return response.data;
   });
 };

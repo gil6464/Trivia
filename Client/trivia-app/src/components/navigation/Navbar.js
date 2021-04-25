@@ -14,7 +14,7 @@ function Navbar() {
         <nav>
           <ul className="navbarlist">
             <li className="navbarli">
-              <Link to="/login">Login</Link>
+              <Link to="/">Login</Link>
             </li>
             <li className="navbarli">
               <Link to="/leaderboard">Leaderboard</Link>
@@ -23,11 +23,11 @@ function Navbar() {
         </nav>
 
         <Switch>
-          <Route exact path="/login">
+          <Route exact path="/">
             <Login setPlayer={setPlayer} />
           </Route>
           <Route exact path="/leaderboard">
-            <Leaderboard />
+            <GameOver currentPlayer={{ name: "", score: 0 }} />
           </Route>
           <Route exact path="/game">
             <Home player={player} setPlayer={setPlayer} />
