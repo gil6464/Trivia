@@ -11,7 +11,6 @@ function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestionType }) {
     setQuestion(data);
   };
   useEffect(() => {
-    console.log("did mount");
     getTypeTwoQuestion();
   }, []);
   const correctWrapper = () => {
@@ -51,7 +50,7 @@ function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestionType }) {
     }
 
     return (
-      <div className="TypeOne">
+      <div className="TypeTwo">
         <h1>
           {question.template} {question.askOn}
         </h1>
@@ -61,7 +60,7 @@ function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestionType }) {
     );
   } else {
     return (
-      <div className="TypeOne">
+      <div className="TypeTwo">
         <h1>Question is loading...</h1>
       </div>
     );
@@ -82,7 +81,7 @@ const getNewKey = () => {
 
 const rateQuestion = async (rate, question, setRated) => {
   const { data } = await axios.post("/savedquestion", {
-    question: question.template,
+    question: question.template + " " + question.askOn + "?",
     column: question.column,
     correct: question.correct,
     rating: rate,

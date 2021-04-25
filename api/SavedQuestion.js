@@ -32,6 +32,7 @@ SaveQuestion.patch("/", (req, res) => {
           { where: { id: questionToUpdate.id } }
         );
         res.send("updated successfully!");
+        f;
       });
   } catch (error) {
     res.send("There was a database failure!").status(500);

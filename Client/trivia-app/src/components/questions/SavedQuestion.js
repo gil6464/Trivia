@@ -61,7 +61,7 @@ function SavedQuestion({
     }
 
     return (
-      <div className="TypeOne">
+      <div className="SavedQuestion">
         <h1>{question.question}</h1>
         {buttonArray}
         <div className="rating">{buttons}</div>
@@ -69,7 +69,7 @@ function SavedQuestion({
     );
   } else {
     return (
-      <div className="TypeOne">
+      <div className="SavedQuestion">
         <h1>Question is loading...</h1>
       </div>
     );

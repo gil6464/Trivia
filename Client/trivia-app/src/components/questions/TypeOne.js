@@ -87,10 +87,10 @@ const rateQuestion = async (rate, question, setRated) => {
     correct: question.correct,
     rating: rate,
     ratingCounter: 1,
-    option1: question.countries[0][question.column],
-    option2: question.countries[1][question.column],
-    option3: question.countries[2][question.column],
-    option4: question.countries[3][question.column],
+    option1: question.countries[0].country,
+    option2: question.countries[1].country,
+    option3: question.countries[2].country,
+    option4: question.countries[3].country,
   });
   setRated(true);
 };
