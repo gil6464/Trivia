@@ -94,18 +94,18 @@ let mockQ = {
   askOn: "Serbia",
 };
 
-function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestion }) {
+function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const correctWrapper = () => {
     correct();
     updateCounter();
-    setQuestion(2);
+    setQuestionType(2);
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
-    setQuestion(2);
+    setQuestionType(2);
   };
 
   let buttonArray = [];

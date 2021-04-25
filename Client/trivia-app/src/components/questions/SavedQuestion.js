@@ -13,18 +13,22 @@ let mockQ = {
   updatedAt: "2021-04-23T10:01:34.000Z",
 };
 
-function SavedQuestion({ updateCounter, updateCounterIncorrect, setQuestion }) {
+function SavedQuestion({
+  updateCounter,
+  updateCounterIncorrect,
+  setQuestionType,
+}) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const correctWrapper = () => {
     correct();
     updateCounter();
-    setQuestion(0);
+    setQuestionType(0);
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
-    setQuestion(0);
+    setQuestionType(0);
   };
 
   let buttonArray = [];

@@ -2,19 +2,14 @@ import TypeOne from "../questions/TypeOne";
 import TypeTwo from "../questions/TypeTwo";
 import SavedQuestion from "../questions/SavedQuestion";
 import React, { useState, useEffect } from "react";
-
-let questionArray = [
-  <button onClick={() => (questionArray[0] = undefined)}>1</button>,
-  <button onClick={() => (questionArray[1] = undefined)}>2</button>,
-  <button onClick={() => (questionArray[2] = undefined)}>3</button>,
-  <button onClick={() => (questionArray[3] = undefined)}>4</button>,
-  <button onClick={() => (questionArray[4] = undefined)}>5</button>,
-];
+import axios from "axios";
 
 function Home() {
-  const [question, setQuestion] = useState(0);
+  const [questionType, setQuestionType] = useState(0);
+  const [question, setQuestion] = useState({});
   const [count, setCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
+
   const updateCounter = () => {
     setCount(count + 1);
   };
@@ -28,16 +23,34 @@ function Home() {
   }, []);
 
   let currentQuestion;
-  if (question == 0) {
-    currentQuestion = <TypeOne updateCounter={updateCounter} updateCounterIncorrect={updateCounterIncorrect} setQuestion={setQuestion} />;
+  if (questionType == 0) {
+    currentQuestion = (
+      <TypeOne
+        updateCounter={updateCounter}
+        updateCounterIncorrect={updateCounterIncorrect}
+        setQuestionType={setQuestionType}
+      />
+    );
   }
 
-  if (question == 1) {
-    currentQuestion = <TypeTwo updateCounter={updateCounter} updateCounterIncorrect={updateCounterIncorrect} setQuestion={setQuestion} />;
+  if (questionType == 1) {
+    currentQuestion = (
+      <TypeTwo
+        updateCounter={updateCounter}
+        updateCounterIncorrect={updateCounterIncorrect}
+        setQuestionType={setQuestionType}
+      />
+    );
   }
 
-  if (question == 2) {
-    currentQuestion = <SavedQuestion updateCounter={updateCounter} updateCounterIncorrect={updateCounterIncorrect} setQuestion={setQuestion} />;
+  if (questionType == 2) {
+    currentQuestion = (
+      <SavedQuestion
+        updateCounter={updateCounter}
+        updateCounterIncorrect={updateCounterIncorrect}
+        setQuestionType={setQuestionType}
+      />
+    );
   }
 
   return (
@@ -53,9 +66,15 @@ function Home() {
 
 const constructQuestions = () => {};
 
-const getTypeOneQuestion = () => {};
+const getTypeTwoQuestion = () => {
+  axios.get("/typetwo").then((response) => {
+    return response.data;
+  });
+};
 
-const getTypeTwoQuestion = () => {};
-
-const getSavedQuestion = () => {};
+const getSavedQuestion = () => {
+  axios.get("/savedquestion").then((response) => {
+    return response.data;
+  });
+};
 export default Home;
