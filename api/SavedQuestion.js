@@ -23,7 +23,7 @@ SaveQuestion.patch("/", (req, res) => {
     const questionToUpdate = req.body;
     savedQuestion
       .findOne({ where: { id: questionToUpdate.id } })
-      .then((question) => {
+      .then(question => {
         savedQuestion.update(
           {
             rating: ratingCalculator(question, questionToUpdate.rate),
@@ -40,20 +40,37 @@ SaveQuestion.patch("/", (req, res) => {
 });
 
 // Get one random saved question
-SaveQuestion.get("/", (req, res) => {
-  try {
-    const result = savedQuestion
-      .findOne({ order: sequelize.literal("rand()") })
-      .then((question) => {
-        return question.toJSON();
-      })
-      .then((err) => {
-        if (err) res.send(err);
-        res.send(result);
-      });
-  } catch (error) {
-    res.send("There was a database failure!").status(500);
+SaveQuestion.get("/", async (req, res) => {
+  let sumRate = 0;
+  const allQusetions = await savedQuestion.findAll({}).then(questions => {
+    return questions.map(question => question.toJSON());
+  });
+  allQusetions.forEach(question => (sumRate += question.rating));
+  console.log(sumRate);
+  let questionsByChance = [];
+  for (let question of allQusetions) {
+    let avgRate = Math.ceil(question.rating / sumRate);
+    for (let i = 0; i < avgRate; i++) {
+      questionsByChance.push(question);
+    }
   }
+  res.send(
+    questionsByChance[Math.floor(Math.random() * questionsByChance.length)]
+  );
+
+  // try {
+  //   const result = savedQuestion
+  //     .findAll({})
+  //     .then(questions => {
+  //       return questions.map(question => question.toJSON());
+  //     })
+  //     .then(err => {
+  //       if (err) res.send(err);
+  //       res.send(result);
+  //     });
+  // } catch (error) {
+  //   res.send("There was a database failure!").status(500);
+  // }
 });
 
 function ratingCalculator(question, toAdd) {
