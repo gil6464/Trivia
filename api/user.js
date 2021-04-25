@@ -19,7 +19,7 @@ user.post("/", (req, res) => {
 
 user.get("/leaderboard", async (req, res) => {
   try {
-    await Users.findAll({}).then((leaderboard) => {
+    await Users.findAll({ order: [["score", "DESC"]] }).then(leaderboard => {
       res.send(leaderboard);
     });
   } catch (err) {
