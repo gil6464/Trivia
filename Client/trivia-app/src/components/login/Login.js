@@ -1,6 +1,8 @@
 import { Redirect } from "react-router";
 import { useRef, useState } from "react";
 
+// add route for sign up,
+
 function Login({ setPlayer }) {
   const UserName = useRef("Your name");
   const [isLogged, setLogged] = useState(false);
