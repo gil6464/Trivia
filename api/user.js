@@ -1,4 +1,6 @@
-const { Users, refreshTokens } = require("../models");
+require("dotenv").config();
+const { REFRESH_TOKEN_SECRET, ACCSSES_TOKEN_SECRET } = process.env;
+const { Users, refreshToken } = require("../models");
 const express = require("express");
 const user = express.Router();
 const { hashSync, compare } = require("bcrypt");
@@ -13,15 +15,36 @@ const jwt = require("jsonwebtoken");
 
 user.post("/register", async (req, res) => {
   const { name, password } = req.body;
-  const checkIfExist = await Users.findOne({ where: { name } }).then(player => {
+  const player = await Users.findOne({ where: { name } }).then(player => {
     return player && player.toJSON();
   });
-  if (checkIfExist) {
+  if (player) {
     return res.send("Username already taken.").status(409);
   }
   const hashPassword = hashSync(password, 10);
   Users.create({ name, password: hashPassword }).then(() => {
     res.send("User created succesfully").status(201);
+  });
+});
+
+user.post("/login", async (req, res) => {
+  const { name, password } = req.body;
+  const player = await Users.findOne({ where: { name } }).then(player => {
+    return player && player.toJSON();
+  });
+  if (!player) {
+    return res.status(403).send("User or password incorrect");
+  }
+  const checkPass = await compare(password, player.password);
+  if (!checkPass) {
+    return res.status(403).send("User or password incorrect");
+  }
+  const accssesToken = jwt.sign(player, ACCSSES_TOKEN_SECRET, {
+    expiresIn: "10m",
+  });
+  const rToken = jwt.sign(player, REFRESH_TOKEN_SECRET);
+  refreshToken.create({ token: rToken }).then(() => {
+    res.json({ name, accssesToken, rToken });
   });
 });
 
