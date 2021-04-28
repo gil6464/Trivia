@@ -1,34 +1,47 @@
 import { Redirect } from "react-router";
 import { useRef, useState } from "react";
-
+import axios from "axios";
+import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 // add route for sign up,
 
 function Login({ setPlayer }) {
-  const UserName = useRef("Your name");
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
   const [isLogged, setLogged] = useState(false);
+  const login = async () => {
+    const { data } = await axios.post("/user/login", {
+      name: name,
+      password: password,
+    });
+    createCookie("token", data.accessToken, 1);
+    setPlayer({
+      name,
+      score: 0,
+      correct: 0,
+      mistakes: 0,
+    });
+    setLogged(true);
+  };
   return (
     <div id="Login">
       <h1 id="Login-Header">Login page</h1>
       <h3>Enter your username to login</h3>
       <form action="/">
-        <input type="text" placeholder="Username" ref={UserName} required />
-        <button
-          type="submit"
-          onClick={e => {
-            if (!UserName.current.value) {
-              return;
-            }
-            setPlayer({
-              name: UserName.current.value,
-              score: 0,
-              correct: 0,
-              mistakes: 0,
-            });
-            setLogged(true);
+        <input
+          onChange={(e) => {
+            setName(e.target.value);
           }}
-        >
-          Play
-        </button>
+          type="text"
+          placeholder="Name"
+        />
+        <input
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          type="password"
+          placeholder="Password"
+        />
+        <button onClick={() => login()}>Login</button>
       </form>
       {isLogged && <Redirect to="/Game" />}
     </div>
