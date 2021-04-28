@@ -1,12 +1,10 @@
 const { savedQuestion } = require("../models");
 const express = require("express");
+const { validateToken } = require("./middlewares");
 const SaveQuestion = express.Router();
-const Sequelize = require("Sequelize");
-const sequelize = require("sequelize");
-const { Op } = require("sequelize");
 
 // post new saved question(when rated).
-SaveQuestion.post("/", (req, res) => {
+SaveQuestion.post("/", validateToken, (req, res) => {
   try {
     const questionToAdd = req.body;
     savedQuestion.create(questionToAdd).then(() => {
@@ -23,7 +21,7 @@ SaveQuestion.patch("/", (req, res) => {
     const questionToUpdate = req.body;
     savedQuestion
       .findOne({ where: { id: questionToUpdate.id } })
-      .then((question) => {
+      .then(question => {
         savedQuestion.update(
           {
             rating: ratingCalculator(question, questionToUpdate.rate),
@@ -42,8 +40,8 @@ SaveQuestion.patch("/", (req, res) => {
 // Get one random saved question
 SaveQuestion.get("/", async (req, res) => {
   try {
-    const allQusetions = await savedQuestion.findAll({}).then((questions) => {
-      return questions.map((question) => question.toJSON());
+    const allQusetions = await savedQuestion.findAll({}).then(questions => {
+      return questions.map(question => question.toJSON());
     });
 
     let questionsByChance = [];
