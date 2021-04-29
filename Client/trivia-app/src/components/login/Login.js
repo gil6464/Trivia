@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 import Signup from "./Signup";
+import { Link } from "react-router-dom";
 // add route for sign up,
 
 function Login({ setPlayer }) {
@@ -65,7 +66,10 @@ function Login({ setPlayer }) {
       </button>
 
       {/*sign up button*/}
-      <div>{registerComponent}</div>
+      <div>
+        <p>Not a user yet?</p>
+        <Link to="/signup">Signup</Link>
+      </div>
     </div>
   );
 }

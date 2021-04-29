@@ -1,4 +1,5 @@
 import Login from "../login/Login";
+import Signup from "../login/Signup";
 import GameOver from "../gameOver/GameOver";
 import Home from "../home/Home";
 import React, { useState } from "react";
@@ -33,6 +34,9 @@ function Navbar() {
           </Route>
           <Route exact path="/game">
             <Home player={player} setPlayer={setPlayer} />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
         </Switch>
       </Router>
