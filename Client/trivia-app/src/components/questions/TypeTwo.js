@@ -7,11 +7,7 @@ function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   const [rated, setRated] = useState(undefined);
 
   const getTypeTwoQuestion = async () => {
-    const { data } = await axios.get("/typetwo", {
-      headers: {
-        authorization: "bearer " + readCookie("token"),
-      },
-    });
+    const { data } = await axios.get("/typetwo");
     setQuestion(data);
   };
   useEffect(() => {

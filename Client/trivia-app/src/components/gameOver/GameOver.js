@@ -6,18 +6,14 @@ function GameOver({ currentPlayer }) {
   const [isPosted, setPosted] = useState(false);
 
   const getLeaderboard = async () => {
-    const { data } = await axios.get("/user/leaderboard", {
-      headers: {
-        authorization: "bearer " + readCookie("token"),
-      },
-    });
+    const { data } = await axios.get("/user/leaderboard");
     setLeaderBoard(data);
   };
   useEffect(() => {
     getLeaderboard();
   }, []);
 
-  const postUser = async (user) => {
+  const postUser = async user => {
     await axios.post(
       "/user/score",
       {

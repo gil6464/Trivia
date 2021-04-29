@@ -15,7 +15,7 @@ const jwt = require("jsonwebtoken");
 
 user.post("/register", async (req, res) => {
   const { name, password } = req.body;
-  const player = await Users.findOne({ where: { name } }).then((player) => {
+  const player = await Users.findOne({ where: { name } }).then(player => {
     return player && player.toJSON();
   });
   if (player) {
@@ -29,7 +29,7 @@ user.post("/register", async (req, res) => {
 
 user.post("/login", async (req, res) => {
   const { name, password } = req.body;
-  const player = await Users.findOne({ where: { name } }).then((player) => {
+  const player = await Users.findOne({ where: { name } }).then(player => {
     return player && player.toJSON();
   });
   if (!player) {
@@ -40,7 +40,7 @@ user.post("/login", async (req, res) => {
     return res.status(403).send("User or password incorrect");
   }
   const accessToken = jwt.sign(player, ACCESS_TOKEN_SECRET, {
-    expiresIn: "10m",
+    expiresIn: "2s",
   });
   const refToken = jwt.sign(player, REFRESH_TOKEN_SECRET);
   refreshToken.create({ token: refToken }).then(() => {
@@ -49,25 +49,35 @@ user.post("/login", async (req, res) => {
 });
 
 user.post("/token", async (req, res) => {
-  const { token } = req.body;
-  if (!token) {
+  const { refToken } = req.body;
+  if (!refToken) {
     return res.status(400).send("Refresh token needed");
   }
-  const checkToken = await refreshToken.findOne({ where: { token } });
+  const checkToken = await refreshToken.findOne({ where: { token: refToken } });
   if (!checkToken) {
     return res.status(403).send("Invalid refresh token");
   }
-  jwt.verify(token, REFRESH_TOKEN_SECRET, (err, decoded) => {
+  jwt.verify(refToken, REFRESH_TOKEN_SECRET, (err, decoded) => {
     if (err) {
       return res.status(403).send("Invalid Refresh Token");
     }
     const { name, password } = decoded;
-    const accessToken = jwt.sign({ name, password }, ACCESS_TOKEN_SECRET, {
-      expiresIn: "10m",
-    });
+    const accessToken = jwt.sign(
+      {
+        result: {
+          name,
+          password,
+        },
+      },
+      ACCESS_TOKEN_SECRET,
+      {
+        expiresIn: "10m",
+      }
+    );
     res.json({ accessToken });
   });
 });
+
 user.post("/score", validateToken, async (req, res) => {
   const { name, score } = req.body;
   try {
@@ -79,7 +89,7 @@ user.post("/score", validateToken, async (req, res) => {
 
 user.get("/leaderboard", validateToken, async (req, res) => {
   try {
-    await Users.findAll({ order: [["score", "DESC"]] }).then((leaderboard) => {
+    await Users.findAll({ order: [["score", "DESC"]] }).then(leaderboard => {
       res.send(leaderboard);
     });
   } catch (err) {

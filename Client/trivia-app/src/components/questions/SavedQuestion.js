@@ -11,9 +11,7 @@ function SavedQuestion({
   const [rated, setRated] = useState(false);
 
   const getSavedQuestions = async () => {
-    const { data } = await axios.get("/savedquestion", {
-      headers: { authorization: "bearer " + readCookie("token") },
-    });
+    const { data } = await axios.get("/savedquestion");
     setQuestion(data);
   };
 
