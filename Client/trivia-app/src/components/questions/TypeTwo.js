@@ -1,13 +1,17 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-
+import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 function TypeTwo({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(undefined);
 
   const getTypeTwoQuestion = async () => {
-    const { data } = await axios.get("/typetwo");
+    const { data } = await axios.get("/typetwo", {
+      headers: {
+        authorization: "bearer " + readCookie("token"),
+      },
+    });
     setQuestion(data);
   };
   useEffect(() => {

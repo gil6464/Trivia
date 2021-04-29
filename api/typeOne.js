@@ -6,37 +6,37 @@ const { validateToken } = require("./middlewares");
 let countries;
 
 function findCorrect(question) {
-  const answers = question.countries.map(answer => answer[question.column]);
+  const answers = question.countries.map((answer) => answer[question.column]);
   let correctAnswer;
   if (question.max) {
     const max = Math.max(...answers);
     correctAnswer = question.countries.find(
-      country => country[question.column] === max
+      (country) => country[question.column] === max
     );
     return correctAnswer.country;
   } else {
     const min = Math.min(...answers);
     correctAnswer = question.countries.find(
-      country => country[question.column] === min
+      (country) => country[question.column] === min
     );
     return correctAnswer.country;
   }
 }
 
-typeOne.get("/", validateToken, async (req, res) => {
+typeOne.get("/", async (req, res) => {
   const result = await questiontypeone
     .findOne({ order: sequelize.literal("rand()") })
-    .then(question => {
+    .then((question) => {
       return question.toJSON();
     });
   let notNull = false;
   while (!notNull) {
     countries = await countryMain
       .findAll({ order: sequelize.literal("rand()"), limit: 4 })
-      .then(countrys => {
-        return countrys.map(country => country.toJSON());
+      .then((countrys) => {
+        return countrys.map((country) => country.toJSON());
       });
-    const answers = countries.map(answer => answer[result.column]);
+    const answers = countries.map((answer) => answer[result.column]);
     if (!answers.includes(null)) {
       notNull = true;
     }

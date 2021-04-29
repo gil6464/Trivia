@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 
 function SavedQuestion({
   updateCounter,
@@ -10,7 +11,9 @@ function SavedQuestion({
   const [rated, setRated] = useState(false);
 
   const getSavedQuestions = async () => {
-    const { data } = await axios.get("/savedquestion");
+    const { data } = await axios.get("/savedquestion", {
+      headers: { authorization: "bearer " + readCookie("token") },
+    });
     setQuestion(data);
   };
 

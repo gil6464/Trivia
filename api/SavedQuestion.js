@@ -21,7 +21,7 @@ SaveQuestion.patch("/", (req, res) => {
     const questionToUpdate = req.body;
     savedQuestion
       .findOne({ where: { id: questionToUpdate.id } })
-      .then(question => {
+      .then((question) => {
         savedQuestion.update(
           {
             rating: ratingCalculator(question, questionToUpdate.rate),
@@ -38,10 +38,10 @@ SaveQuestion.patch("/", (req, res) => {
 });
 
 // Get one random saved question
-SaveQuestion.get("/", async (req, res) => {
+SaveQuestion.get("/", validateToken, async (req, res) => {
   try {
-    const allQusetions = await savedQuestion.findAll({}).then(questions => {
-      return questions.map(question => question.toJSON());
+    const allQusetions = await savedQuestion.findAll({}).then((questions) => {
+      return questions.map((question) => question.toJSON());
     });
 
     let questionsByChance = [];
