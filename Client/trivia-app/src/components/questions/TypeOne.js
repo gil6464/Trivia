@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 
 function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(false);
 
   const getTypeOneQuestion = async () => {
-    const { data } = await axios.get("/typeone");
+    const { data } = await axios.get("/typeone", {
+      headers: { authorization: "bearer " + readCookie("token") },
+    });
     setQuestion(data);
   };
 

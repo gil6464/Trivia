@@ -1,20 +1,35 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-
+import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 function GameOver({ currentPlayer }) {
   const [leaderBoard, setLeaderBoard] = useState([]);
   const [isPosted, setPosted] = useState(false);
 
   const getLeaderboard = async () => {
-    const { data } = await axios.get("/user/leaderboard");
+    const { data } = await axios.get("/user/leaderboard", {
+      headers: {
+        authorization: "bearer " + readCookie("token"),
+      },
+    });
     setLeaderBoard(data);
   };
   useEffect(() => {
     getLeaderboard();
   }, []);
 
-  const postUser = async user => {
-    await axios.post("/user", { name: user.name, score: user.score });
+  const postUser = async (user) => {
+    await axios.post(
+      "/user/score",
+      {
+        name: user.name,
+        score: user.score,
+      },
+      {
+        headers: {
+          authorization: "bearer " + readCookie("token"),
+        },
+      }
+    );
     setPosted(true);
     getLeaderboard();
   };

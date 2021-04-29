@@ -15,7 +15,7 @@ const jwt = require("jsonwebtoken");
 
 user.post("/register", async (req, res) => {
   const { name, password } = req.body;
-  const player = await Users.findOne({ where: { name } }).then(player => {
+  const player = await Users.findOne({ where: { name } }).then((player) => {
     return player && player.toJSON();
   });
   if (player) {
@@ -29,7 +29,7 @@ user.post("/register", async (req, res) => {
 
 user.post("/login", async (req, res) => {
   const { name, password } = req.body;
-  const player = await Users.findOne({ where: { name } }).then(player => {
+  const player = await Users.findOne({ where: { name } }).then((player) => {
     return player && player.toJSON();
   });
   if (!player) {
@@ -68,10 +68,18 @@ user.post("/token", async (req, res) => {
     res.json({ accessToken });
   });
 });
+user.post("/score", validateToken, async (req, res) => {
+  const { name, score } = req.body;
+  try {
+    await Users.update({ score }, { where: { name } });
+  } catch (err) {
+    res.send(err).status(500);
+  }
+});
 
 user.get("/leaderboard", validateToken, async (req, res) => {
   try {
-    await Users.findAll({ order: [["score", "DESC"]] }).then(leaderboard => {
+    await Users.findAll({ order: [["score", "DESC"]] }).then((leaderboard) => {
       res.send(leaderboard);
     });
   } catch (err) {

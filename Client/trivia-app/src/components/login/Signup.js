@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import axios from "axios";
+import { useState } from "react";
+import { Redirect } from "react-router";
 
 export default function Signup(props) {
   const [name, setName] = useState();
@@ -37,30 +39,11 @@ export default function Signup(props) {
           type="password"
           placeholder="Password"
         />
-        <button type="submit " onClick={() => singup()}>
+        <button type="submit " onClick={() => signup()}>
           Singup
         </button>
       </form>
-      {isLogged && <Redirect to="/" />}
+      {isSigned && <Redirect to="/" />}
     </div>
   );
-  {
-    /* <header><h1>Sign up</h1></header>
-    <input type="text" ref={userName}>
-      <input type="password" ref={password}></input>
-      <button
-          type="submit"
-          onClick={e => {
-            if (!userName.current.value) {
-              return;
-            }
-            if (!password.current.value) {
-              return;
-            }
-          }}
-        >
-          Play
-        </button>
-  </div>) */
-  }
 }

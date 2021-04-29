@@ -23,7 +23,7 @@ function findCorrect(question) {
   }
 }
 
-typeOne.get("/", async (req, res) => {
+typeOne.get("/", validateToken, async (req, res) => {
   const result = await questiontypeone
     .findOne({ order: sequelize.literal("rand()") })
     .then((question) => {

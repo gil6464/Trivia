@@ -2,19 +2,20 @@ import { Redirect } from "react-router";
 import { useState } from "react";
 import axios from "axios";
 import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
+import Signup from "./Signup";
 // add route for sign up,
 
 function Login({ setPlayer }) {
   const [name, setName] = useState();
   const [password, setPassword] = useState();
   const [isLogged, setLogged] = useState(false);
+  const [isRegister, showRegister] = useState(false);
 
   const login = async () => {
     const { data } = await axios.post("/user/login", {
       name,
       password,
     });
-    console.log("!!!!!!!!!!!!!!!!!!!", data);
     await createCookie("token", data.accessToken, 1);
     await createCookie("refreshToken", data.refreshToken, 1);
     setPlayer({
@@ -25,6 +26,15 @@ function Login({ setPlayer }) {
     });
     setLogged(true);
   };
+
+  let registerComponent;
+  if (isRegister) {
+    registerComponent = <Signup />;
+  } else {
+    registerComponent = (
+      <button onClick={() => showRegister(true)}>Register</button>
+    );
+  }
 
   return (
     <div id="Login">
@@ -53,6 +63,9 @@ function Login({ setPlayer }) {
       >
         Login
       </button>
+
+      {/*sign up button*/}
+      <div>{registerComponent}</div>
     </div>
   );
 }
