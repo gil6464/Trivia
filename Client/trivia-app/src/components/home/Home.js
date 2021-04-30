@@ -70,7 +70,7 @@ function Home({ player, setPlayer }) {
         {currentQuestion}
       </div>
     );
-  } else return <GameOver currentPlayer={player} />;
+  } else return <GameOver currentPlayer={player} setPlayer={setPlayer} />;
 }
 
 // const getTypeTwoQuestion = () => {
