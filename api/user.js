@@ -104,7 +104,7 @@ user.post("/logout", validateToken, async (req, res) => {
     res.send("Refresh Token Required").status(400);
   }
   try {
-    await refreshToken.destroy({ where: { refToken } });
+    await refreshToken.destroy({ where: { token: refToken } });
     res.send("User logged out successfully!").status();
   } catch {
     res.send("Invalid Refresh Token").status(400);

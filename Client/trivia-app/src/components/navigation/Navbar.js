@@ -11,7 +11,7 @@ import Cookies from "js-cookie";
 function Navbar() {
   const [player, setPlayer] = useState({});
   const logout = async () => {
-    await axios.post("/user/logout");
+    await axios.post("/user/logout", { refToken: Cookies.get("refreshToken") });
     setPlayer({});
     Cookies.remove("token");
     Cookies.remove("refreshToken");
