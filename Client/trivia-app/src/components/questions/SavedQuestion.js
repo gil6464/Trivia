@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 
 function SavedQuestion({
   updateCounter,

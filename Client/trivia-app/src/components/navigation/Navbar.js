@@ -5,11 +5,8 @@ import Home from "../home/Home";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Navbar.css";
-import { eraseCookie, readCookie, createCookie } from "../../utils/cookies";
 function Navbar() {
   const [player, setPlayer] = useState({});
-
-  const [user, setUser] = useState(readCookie("token"));
 
   return (
     <div id="navbar">
