@@ -14,7 +14,7 @@ function validateToken(req, res, next) {
   jwt.verify(token, ACCESS_TOKEN_SECRET, (err, decoded) => {
     if (err) {
       console.log(err);
-      return res.status(403).send("Invalid Access Token");
+      return res.status(303).send("Invalid Access Token");
     }
     req.user = decoded;
     next();

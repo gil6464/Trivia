@@ -5,8 +5,17 @@ import Home from "../home/Home";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Navbar.css";
+import axios from "axios";
+import Cookies from "js-cookie";
+
 function Navbar() {
   const [player, setPlayer] = useState({});
+  const logout = async () => {
+    await axios.post("/user/logout");
+    setPlayer({});
+    Cookies.remove("token");
+    Cookies.remove("refreshToken");
+  };
 
   return (
     <div id="navbar">
@@ -18,6 +27,9 @@ function Navbar() {
             </li>
             <li className="navbarli">
               <Link to="/leaderboard">Leaderboard</Link>
+            </li>
+            <li className="navbarli" onClick={logout}>
+              <Link to="/">Logout</Link>
             </li>
           </ul>
         </nav>

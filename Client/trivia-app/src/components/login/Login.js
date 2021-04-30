@@ -2,6 +2,7 @@ import { Redirect } from "react-router";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 // add route for sign up,
 
 function Login({ setPlayer }) {
@@ -10,11 +11,12 @@ function Login({ setPlayer }) {
   const [isLogged, setLogged] = useState(false);
 
   const login = async () => {
-    await axios.post("/user/login", {
+    const { data } = await axios.post("/user/login", {
       name,
       password,
     });
-
+    Cookies.set("token", data.accessToken);
+    Cookies.set("refreshToken", data.refreshToken);
     setPlayer({
       name,
       score: 0,

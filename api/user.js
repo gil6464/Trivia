@@ -15,7 +15,7 @@ const jwt = require("jsonwebtoken");
 
 user.post("/register", async (req, res) => {
   const { name, password } = req.body;
-  const player = await Users.findOne({ where: { name } }).then(player => {
+  const player = await Users.findOne({ where: { name } }).then((player) => {
     return player && player.toJSON();
   });
   if (player) {
@@ -29,7 +29,7 @@ user.post("/register", async (req, res) => {
 
 user.post("/login", async (req, res) => {
   const { name, password } = req.body;
-  const player = await Users.findOne({ where: { name } }).then(player => {
+  const player = await Users.findOne({ where: { name } }).then((player) => {
     return player && player.toJSON();
   });
   if (!player) {
@@ -82,6 +82,7 @@ user.post("/score", validateToken, async (req, res) => {
   const { name, score } = req.body;
   try {
     await Users.update({ score }, { where: { name } });
+    res.send("Score updated successfully").status(200);
   } catch (err) {
     res.send(err).status(500);
   }
@@ -89,7 +90,7 @@ user.post("/score", validateToken, async (req, res) => {
 
 user.get("/leaderboard", validateToken, async (req, res) => {
   try {
-    await Users.findAll({ order: [["score", "DESC"]] }).then(leaderboard => {
+    await Users.findAll({ order: [["score", "DESC"]] }).then((leaderboard) => {
       res.send(leaderboard);
     });
   } catch (err) {
@@ -97,4 +98,16 @@ user.get("/leaderboard", validateToken, async (req, res) => {
   }
 });
 
+user.post("/logout", validateToken, async (req, res) => {
+  const { refToken } = req.body;
+  if (!refToken) {
+    res.send("Refresh Token Required").status(400);
+  }
+  try {
+    await refreshToken.destroy({ where: { refToken } });
+    res.send("User logged out successfully!").status();
+  } catch {
+    res.send("Invalid Refresh Token").status(400);
+  }
+});
 module.exports = user;

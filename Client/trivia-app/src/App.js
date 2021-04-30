@@ -5,14 +5,13 @@ import Cookies from "js-cookie";
 import axios from "axios";
 
 axios.interceptors.response.use(
-  response => {
+  (response) => {
     return response;
   },
   async function (error) {
-    console.log(error);
     const refreshToken = Cookies.get("refreshToken");
     const errorRequest = error.response;
-    if (errorRequest.status !== 403) {
+    if (errorRequest.status !== 303) {
       return error;
     }
     const originalRequest = error.config;
