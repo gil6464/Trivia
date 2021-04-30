@@ -1,4 +1,4 @@
-const { countryMain, questiontypeone, questiontypetwo } = require("../models");
+const { countryMain, questiontypetwo } = require("../models");
 const express = require("express");
 const typeTwo = express.Router();
 const sequelize = require("sequelize");

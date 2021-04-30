@@ -4,20 +4,32 @@ import "./App.css";
 import Cookies from "js-cookie";
 import axios from "axios";
 
+axios.interceptors.response.use(
+  response => {
+    return response;
+  },
+  async function (error) {
+    console.log(error);
+    const refreshToken = Cookies.get("refreshToken");
+    const errorRequest = error.response;
+    if (errorRequest.status !== 403) {
+      return error;
+    }
+    const originalRequest = error.config;
+    try {
+      const { accessToken } = await getNewToken(refreshToken);
+      Cookies.set("token", `${accessToken}`, { expires: 1 });
+      const originalResponse = await axios(originalRequest);
+      return originalResponse;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+);
 axios.interceptors.request.use(async function (config) {
-  const token = Cookies.get("token");
-
+  const token = await Cookies.get("token");
   config.headers.Authorization = "bearer " + token;
   return config;
-});
-
-axios.interceptors.response.use({}, async function (error) {
-  const refreshToken = Cookies.get("refreshToken");
-  const errorRequest = error.response;
-  if (errorRequest.status === 403) {
-    const { accessToken } = await getNewToken(refreshToken);
-    Cookies.set("token", accessToken);
-  }
 });
 async function getNewToken(refToken) {
   try {

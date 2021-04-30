@@ -44,14 +44,14 @@ function Login({ setPlayer }) {
       <h3>Enter your username to login</h3>
 
       <input
-        onChange={(e) => {
+        onChange={e => {
           setName(e.target.value);
         }}
         type="text"
         placeholder="Name"
       />
       <input
-        onChange={(e) => {
+        onChange={e => {
           setPassword(e.target.value);
         }}
         type="password"

@@ -14,18 +14,10 @@ function GameOver({ currentPlayer }) {
   }, []);
 
   const postUser = async user => {
-    await axios.post(
-      "/user/score",
-      {
-        name: user.name,
-        score: user.score,
-      },
-      {
-        headers: {
-          authorization: "bearer " + readCookie("token"),
-        },
-      }
-    );
+    await axios.post("/user/score", {
+      name: user.name,
+      score: user.score,
+    });
     setPosted(true);
     getLeaderboard();
   };
