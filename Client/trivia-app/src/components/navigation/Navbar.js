@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Navbar.css";
 import axios from "axios";
 import Cookies from "js-cookie";
-import Home from "../Home/Home";
-import First from "../Home/First";
+import Home from "../home/Home";
+import First from "../home/First.js";
 
 function Navbar() {
   const [player, setPlayer] = useState({});
@@ -29,9 +29,9 @@ function Navbar() {
             <li className="navbarli">
               <Link to="/leaderboard">Leaderboard</Link>
             </li>
-            <li className="navbarli logout" onClick={logout}>
+            {/* <li className="navbarli logout" onClick={logout}>
               <Link to="/">Logout</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
