@@ -1,0 +1,21 @@
+#login-header {
+  margin-top: 8rem;
+  font-size: 7rem;
+  color: aqua;
+}
+
+#login-welcome {
+  margin-top: 8rem;
+  font-size: 4rem;
+  color: aqua;
+}
+
+#question-button {
+  height: 13rem;
+  width: 10rem;
+  margin-left: 2rem;
+}
+
+#table {
+  align-items: center;
+}
