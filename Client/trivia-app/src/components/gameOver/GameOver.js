@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router";
 
-function GameOver({ currentPlayer, setPlayer }) {
+function GameOver({ currentPlayer, setPlayer, setTimer, setCount }) {
   const [leaderBoard, setLeaderBoard] = useState([]);
   const [isPosted, setPosted] = useState(false);
   const [startNewGame, setstartNewGame] = useState(false);
@@ -31,6 +31,8 @@ function GameOver({ currentPlayer, setPlayer }) {
       mistakes: 0,
     });
     setstartNewGame(true);
+    setTimer(20);
+    setCount(0);
   };
   if (startNewGame) {
     return <Redirect to="/game"></Redirect>;
