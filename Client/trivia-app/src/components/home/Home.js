@@ -14,7 +14,7 @@ function Home({ player, setPlayer }) {
     if (timer > 0) setTimer(timer - 1);
     else {
       updateCounterIncorrect();
-      if (questionType != 2) {
+      if (questionType !== 2) {
         setQuestionType(questionType + 1);
       } else {
         setQuestionType(0);
