@@ -1,6 +1,19 @@
 * {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Optima;
 }
+.App {
+  text-align: center;
+  background-color: grey;
+  /* z-index: 1; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 table {
   /* margin-top: 40px; */
   text-align: center;
