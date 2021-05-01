@@ -31,8 +31,9 @@ function Login({ setPlayer }) {
   return (
     <div id="Login">
       {isLogged && <Redirect to="/game"></Redirect>}
-      <h1 id="Login-Header">Login page</h1>
-      <h3>Enter your username to login</h3>
+      <h2 id="login-welcome">
+        Hello, <br /> Welcome Back!
+      </h2>
 
       <input
         onChange={(e) => {

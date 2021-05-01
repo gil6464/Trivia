@@ -21,6 +21,15 @@ function First(props) {
     <div className="loginAndSignup">
       {toLogin && <Redirect to="/login"></Redirect>}
       {toSignUp && <Redirect to="/signup"></Redirect>}
+
+      <h1 id="welcome-header">trivia name </h1>
+
+      <table>
+        {tableRow}
+        {tableRow}
+        {tableRow}
+      </table>
+
       <button
         onClick={() => {
           setToLogin(true);
