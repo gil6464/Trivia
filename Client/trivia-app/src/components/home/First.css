@@ -4,12 +4,48 @@
   color: aqua;
 }
 
-#question-button {
+.question-button {
   height: 13rem;
   width: 10rem;
   margin-left: 2rem;
 }
 
-/* #table {
-  align-items: center;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+/* 
+#table-container {
+  bottom: 3rem;
+  position: absolute;
+}
+
+#buttons-container {
+  display: flex;
+  flex-direction: column;
+  right: 10rem;
+  bottom: 25rem;
+  position: absolute;
+}
+
+#second-header {
+  left: 8rem;
+  bottom: 25rem;
+  position: absolute;
 } */
+
+#table1 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 2.5rem;
+  padding-top: 5rem;
+}
+#table3 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 3rem;
+  padding-bottom: 2rem;
+}
