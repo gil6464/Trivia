@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { Redirect } from "react-router";
+import "./Signup.css";
 
 export default function Signup(props) {
   const [name, setName] = useState();
@@ -23,7 +24,7 @@ export default function Signup(props) {
   };
   return (
     <div>
-      <h1>Register</h1>
+      <h1 id="signUp">Register</h1>
       <form action="/">
         <input
           onChange={(e) => {

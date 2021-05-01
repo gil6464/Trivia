@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router";
 import logo from "./logo.png";
+import "./First.css";
 
 function First(props) {
   const [toLogin, setToLogin] = useState(false);
