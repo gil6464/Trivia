@@ -28,7 +28,7 @@ function Navbar() {
             <li className="navbarli">
               <Link to="/leaderboard">Leaderboard</Link>
             </li>
-            <li className="navbarli" onClick={logout}>
+            <li className="navbarli logout" onClick={logout}>
               <Link to="/">Logout</Link>
             </li>
           </ul>

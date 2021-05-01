@@ -63,9 +63,9 @@ function Home({ player, setPlayer }) {
     return (
       <div id="Login">
         <h1>{player.name}</h1>
-        <h2>Your Score is: {player.score}</h2>
-        <h2>Correct answers: {player.correct}</h2>
-        <h2>Incorrect answers: {player.mistakes}</h2>
+        <h3>Your Score is: {player.score}</h3>
+        <h3>Correct answers: {player.correct}</h3>
+        <h3>Incorrect answers: {player.mistakes}</h3>
         <h2>question number: {player.correct + player.mistakes + 1}</h2>
         {currentQuestion}
       </div>
@@ -73,15 +73,4 @@ function Home({ player, setPlayer }) {
   } else return <GameOver currentPlayer={player} setPlayer={setPlayer} />;
 }
 
-// const getTypeTwoQuestion = () => {
-//   axios.get("/typetwo").then(response => {
-//     return response.data;
-//   });
-// };
-
-// const getSavedQuestion = () => {
-//   axios.get("/savedquestion").then(response => {
-//     return response.data;
-//   });
-// };
 export default Home;
