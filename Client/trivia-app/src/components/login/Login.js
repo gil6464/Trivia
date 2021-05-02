@@ -34,7 +34,6 @@ function Login({ setPlayer }) {
       <h2 id="login-welcome">
         Hello, <br /> Welcome Back!
       </h2>
-
       <div className="card">
         <label className="input">
           <input
@@ -71,12 +70,12 @@ function Login({ setPlayer }) {
           </button>
         </div>
       </div>
-
-      {/*sign up button*/}
-      {/* <div>
-        <p>Not a user yet?</p>
-        <Link to="/signup">Signup</Link>
-      </div> */}
+      <div id="redirect">
+        <p id="not-user">Not a user yet?</p>
+        <Link to="/signup" id="redirect-span">
+          Register
+        </Link>
+      </div>
     </div>
   );
 }

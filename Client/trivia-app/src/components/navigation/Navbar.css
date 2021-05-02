@@ -4,7 +4,6 @@
   padding: 0;
   overflow: hidden;
   background-color: #455a64;
-  /* background-color: #333; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,7 +22,6 @@
 }
 
 .navbarli a:hover {
-  /* background-color: rgb(190, 78, 68); */
   background-color: #276681;
 }
 .logout a {

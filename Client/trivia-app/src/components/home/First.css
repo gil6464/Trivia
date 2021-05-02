@@ -7,7 +7,6 @@
 #welcome-header {
   width: 30rem;
   font-size: 5rem;
-  /* color: rgb(184, 50, 45); */
   color: #ffffff;
 }
 
@@ -44,9 +43,11 @@
 }
 #register {
   padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 #login {
   padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 #table1 {
