@@ -9,15 +9,26 @@ function Home({ player, setPlayer }) {
   const [count, setCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
   const [timer, setTimer] = useState(20);
+  const [timerState, stopTimer] = useState(false);
+
+  function calcTimer() {
+    stopTimer(false);
+    if (count < 15) {
+      return setTimer(20 - count);
+    }
+    return setTimer(5);
+  }
 
   useInterval(() => {
-    if (timer > 0) setTimer(timer - 1);
-    else {
-      updateCounterIncorrect();
-      if (questionType !== 2) {
-        setQuestionType(questionType + 1);
-      } else {
-        setQuestionType(0);
+    if (!timerState) {
+      if (timer > 0) setTimer(timer - 1);
+      else {
+        updateCounterIncorrect();
+        if (questionType !== 2) {
+          setQuestionType(questionType + 1);
+        } else {
+          setQuestionType(0);
+        }
       }
     }
   }, 1000);
@@ -32,7 +43,6 @@ function Home({ player, setPlayer }) {
       mistakes: player.mistakes,
     });
     setCount(count + 1);
-    setTimer(20 - count * 0.5);
   };
 
   const updateCounterIncorrect = () => {
@@ -44,16 +54,18 @@ function Home({ player, setPlayer }) {
       correct: player.correct,
       mistakes: player.mistakes + 1,
     });
-    setTimer(20 - count * 0.5);
   };
 
   let currentQuestion;
   if (questionType === 0) {
     currentQuestion = (
       <TypeOne
+        stopTimer={stopTimer}
+        setTimer={setTimer}
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
+        calcTimer={calcTimer}
       />
     );
   }
@@ -61,9 +73,12 @@ function Home({ player, setPlayer }) {
   if (questionType === 1) {
     currentQuestion = (
       <TypeTwo
+        stopTimer={stopTimer}
+        setTimer={setTimer}
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
+        calcTimer={calcTimer}
       />
     );
   }
@@ -71,9 +86,12 @@ function Home({ player, setPlayer }) {
   if (questionType === 2) {
     currentQuestion = (
       <SavedQuestion
+        stopTimer={stopTimer}
+        setTimer={setTimer}
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
+        calcTimer={calcTimer}
       />
     );
   }

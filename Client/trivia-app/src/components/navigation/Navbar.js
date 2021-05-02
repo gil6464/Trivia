@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Navbar.css";
 import axios from "axios";
 import Cookies from "js-cookie";
-import Home from "../Home/Home";
+import Home from "../Home/Game";
 import First from "../Home/First";
 
 function Navbar() {

@@ -1,9 +1,20 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import CorrectAnswer from "./CorrectAnswer";
+//TODO
 
-function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
+function TypeOne({
+  updateCounter,
+  updateCounterIncorrect,
+  setQuestionType,
+  calcTimer,
+  setTimer,
+  stopTimer,
+  count,
+}) {
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(false);
+  const [showButton, setButton] = useState(false);
 
   const getTypeOneQuestion = async () => {
     const { data } = await axios.get("/typeone");
@@ -17,13 +28,15 @@ function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   const correctWrapper = () => {
     correct();
     updateCounter();
-    setQuestionType(1);
+    setButton(true);
+    stopTimer(true);
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
-    setQuestionType(1);
+    setButton(true);
+    stopTimer(true);
   };
 
   let buttons;
@@ -34,20 +47,35 @@ function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   }
 
   if (question) {
+    let nextQuestion = <h1>Click above to answer</h1>;
+    if (showButton) {
+      nextQuestion = (
+        <CorrectAnswer
+          correctAnswer={question.correct}
+          nextQuestion={() => {
+            setQuestionType(1);
+            calcTimer();
+          }}
+        />
+      );
+    }
+
     let buttonArray = [];
-    for (let country of question.countries) {
-      if (country.country === question.correct) {
-        buttonArray.push(
-          <button key={getNewKey()} onClick={() => correctWrapper()}>
-            {country.country}
-          </button>
-        );
-      } else {
-        buttonArray.push(
-          <button key={getNewKey()} onClick={() => inCorrectWrapper()}>
-            {country.country}
-          </button>
-        );
+    if (!showButton) {
+      for (let country of question.countries) {
+        if (country.country === question.correct) {
+          buttonArray.push(
+            <button key={getNewKey()} onClick={() => correctWrapper()}>
+              {country.country}
+            </button>
+          );
+        } else {
+          buttonArray.push(
+            <button key={getNewKey()} onClick={() => inCorrectWrapper()}>
+              {country.country}
+            </button>
+          );
+        }
       }
     }
     return (
@@ -55,6 +83,7 @@ function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
         <h1>{question.template}</h1>
         {buttonArray}
         <div className="rating">{buttons}</div>
+        {nextQuestion}
       </div>
     );
   } else {
@@ -66,13 +95,9 @@ function TypeOne({ updateCounter, updateCounterIncorrect, setQuestionType }) {
   }
 }
 
-const correct = () => {
-  //Add correct functionallity
-};
+const correct = () => {};
 
-const inCorrect = () => {
-  //Add incorrect functionallity
-};
+const inCorrect = () => {};
 
 const getNewKey = () => {
   return 1000000 + Math.floor(Math.random() * 9000000);
