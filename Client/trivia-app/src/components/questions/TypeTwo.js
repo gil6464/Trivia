@@ -6,7 +6,7 @@ function TypeTwo({
   updateCounter,
   updateCounterIncorrect,
   setQuestionType,
-  calcTimer,
+  setCounter,
 }) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const [question, setQuestion] = useState(undefined);
@@ -46,8 +46,8 @@ function TypeTwo({
           correctAnswer={correctText}
           nextQuestion={() => {
             setQuestionType(2);
-            calcTimer();
           }}
+          setCounter={setCounter}
         />
       );
     }

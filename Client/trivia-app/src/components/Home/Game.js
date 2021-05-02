@@ -11,14 +11,6 @@ function Home({ player, setPlayer }) {
   const [timer, setTimer] = useState(20);
   const [timerState, stopTimer] = useState(false);
 
-  function calcTimer() {
-    stopTimer(false);
-    if (count < 15) {
-      return setTimer(20 - count);
-    }
-    return setTimer(5);
-  }
-
   useInterval(() => {
     if (!timerState) {
       if (timer > 0) setTimer(timer - 1);
@@ -33,6 +25,14 @@ function Home({ player, setPlayer }) {
     }
   }, 1000);
 
+  useEffect(() => {
+    stopTimer(false);
+    if (count < 15) {
+      return setTimer(20 - count);
+    }
+    return setTimer(5);
+  }, [count]);
+
   const updateCounter = () => {
     setPlayer({
       name: player.name,
@@ -42,9 +42,10 @@ function Home({ player, setPlayer }) {
       correct: player.correct + 1,
       mistakes: player.mistakes,
     });
+  };
+  const setCounter = () => {
     setCount(count + 1);
   };
-
   const updateCounterIncorrect = () => {
     setCount(count + 1);
     setIncorrectCount(incorrectCount + 1);
@@ -65,7 +66,7 @@ function Home({ player, setPlayer }) {
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
-        calcTimer={calcTimer}
+        setCounter={setCounter}
       />
     );
   }
@@ -78,7 +79,7 @@ function Home({ player, setPlayer }) {
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
-        calcTimer={calcTimer}
+        setCounter={setCounter}
       />
     );
   }
@@ -91,7 +92,7 @@ function Home({ player, setPlayer }) {
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
-        calcTimer={calcTimer}
+        setCounter={setCounter}
       />
     );
   }

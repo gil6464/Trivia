@@ -3,7 +3,7 @@ import React from "react";
 export default function CorrectAnswer({
   correctAnswer,
   nextQuestion,
-  setTimer,
+  setCounter,
 }) {
   let answer;
 
@@ -18,6 +18,7 @@ export default function CorrectAnswer({
       <button
         onClick={() => {
           nextQuestion();
+          setCounter();
         }}
       >
         Continue

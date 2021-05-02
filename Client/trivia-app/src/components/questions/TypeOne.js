@@ -7,10 +7,8 @@ function TypeOne({
   updateCounter,
   updateCounterIncorrect,
   setQuestionType,
-  calcTimer,
-  setTimer,
+  setCounter,
   stopTimer,
-  count,
 }) {
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(false);
@@ -54,8 +52,8 @@ function TypeOne({
           correctAnswer={question.correct}
           nextQuestion={() => {
             setQuestionType(1);
-            calcTimer();
           }}
+          setCounter={setCounter}
         />
       );
     }

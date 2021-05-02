@@ -1,13 +1,16 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import CorrectAnswer from "./CorrectAnswer";
 
 function SavedQuestion({
   updateCounter,
   updateCounterIncorrect,
   setQuestionType,
+  setCounter,
 }) {
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(false);
+  const [answer, setAnswer] = useState(false);
 
   const getSavedQuestions = async () => {
     const { data } = await axios.get("/savedquestion");
@@ -22,12 +25,14 @@ function SavedQuestion({
     correct();
     updateCounter();
     setQuestionType(0);
+    setAnswer(true);
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
     setQuestionType(0);
+    setAnswer(true);
   };
   if (question) {
     let buttonArray = [];
@@ -65,6 +70,15 @@ function SavedQuestion({
         <h1>{question.question}</h1>
         {buttonArray}
         <div className="rating">{buttons}</div>
+        <CorrectAnswer
+          correctAnswer={answer ? question.correct : ""}
+          nextQuestion={() => {
+            setQuestionType();
+            setCounter = { setCounter };
+          }}
+          setCounter={setCounter}
+        />
+        ;
       </div>
     );
   } else {
