@@ -53,8 +53,6 @@ function Login({ setPlayer }) {
       >
         Login
       </button>
-
-      {/*sign up button*/}
       <div>
         <p>Not a user yet?</p>
         <Link to="/signup">Signup</Link>
