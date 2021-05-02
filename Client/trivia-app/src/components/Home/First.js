@@ -1,62 +1,30 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router";
-import QA from "./Q&A.gif";
-import search from "./search.gif";
-import what from "./what.gif";
-import stuck from "./stuck.gif";
+import my from "./my.gif";
+import my1 from "./my1.gif";
+import my2 from "./my2.gif";
+import my3 from "./my3.gif";
+import my4 from "./my4.gif";
+import my5 from "./my5.gif";
 import "./First.css";
 
 function First(props) {
   const [toLogin, setToLogin] = useState(false);
   const [toSignUp, setToSignUp] = useState(false);
 
-  const image = (
-    <img src={QA} alt="question-logo" className="question-button" />
-  );
-  const image1 = (
-    <img src={search} alt="question-logo" className="question-button" />
-  );
-  const image2 = (
-    <img src={what} alt="question-logo" className="question-button" />
-  );
-
-  const tableRow1 = (
-    <tr id="table1">
-      <td>{image}</td>
-      <td>{image1}</td>
-      <td>{image2}</td>
-    </tr>
-  );
-
-  const tableRow2 = (
-    <tr id="table2">
-      <td>{image1}</td>
-      <td>{image2}</td>
-      <td>{image}</td>
-    </tr>
-  );
-
-  const tableRow3 = (
-    <tr id="table3">
-      <td>{image2}</td>
-      <td>{image}</td>
-      <td>{image1}</td>
-    </tr>
-  );
-
   return (
     <div className="loginAndSignup">
       {toLogin && <Redirect to="/login"></Redirect>}
       {toSignUp && <Redirect to="/signup"></Redirect>}
-      <h1 id="welcome-header">trivia name </h1>
-
-      <div className="container">
-        <section id="table-container">
-          {tableRow1}
-          {tableRow3}
-        </section>
-        <h2 id="second-header">Who will be the champion?</h2>
-        <section id="buttons-container">
+      <section id="gifs1">
+        <img src={my} alt="question-logo" className="question-image" />
+        <img src={my1} alt="question-logo" className="question-image" />
+        <img src={my2} alt="question-logo" className="question-image" />
+      </section>
+      <section id="container">
+        <h1 id="welcome-header">How well do you know the world?</h1>
+        <section>
+          <p id="login">Already a user?</p>
           <button
             onClick={() => {
               setToLogin(true);
@@ -64,15 +32,23 @@ function First(props) {
           >
             Login
           </button>
+        </section>
+        <section>
+          <p id="register">Not a user yet?</p>
           <button
             onClick={() => {
               setToSignUp(true);
             }}
           >
-            SignUp
+            Register
           </button>
         </section>
-      </div>
+      </section>
+      <section id="gifs2">
+        <img src={my5} alt="question-logo" className="question-image" />
+        <img src={my3} alt="question-logo" className="question-image" />
+        <img src={my4} alt="question-logo" className="question-image" />
+      </section>
     </div>
   );
 }

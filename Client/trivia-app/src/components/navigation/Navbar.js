@@ -8,6 +8,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import Home from "../home/Home";
 import First from "../home/First.js";
+import exit from "./exit.png";
 
 function Navbar() {
   const [player, setPlayer] = useState({});
@@ -29,9 +30,13 @@ function Navbar() {
             <li className="navbarli">
               <Link to="/leaderboard">Leaderboard</Link>
             </li>
-            {/* <li className="navbarli logout" onClick={logout}>
-              <Link to="/">Logout</Link>
-            </li> */}
+            <li id="game-name">World Trivia Game</li>
+            <li id="logout" className="navbarli logout" onClick={logout}>
+              <Link to="/">
+                {" "}
+                <img id="exit" src={exit} /> Logout
+              </Link>
+            </li>
           </ul>
         </nav>
 

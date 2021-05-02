@@ -35,33 +35,48 @@ function Login({ setPlayer }) {
         Hello, <br /> Welcome Back!
       </h2>
 
-      <input
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-        type="text"
-        placeholder="Name"
-      />
-      <input
-        onChange={(e) => {
-          setPassword(e.target.value);
-        }}
-        type="password"
-        placeholder="Password"
-      />
-      <button
-        onClick={() => {
-          login();
-        }}
-      >
-        Login
-      </button>
+      <div className="card">
+        <label className="input">
+          <input
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            className="input__field"
+            type="text"
+            placeholder=" "
+          />
+          <span className="input__label">Username</span>
+        </label>
+
+        <label className="input">
+          <input
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            className="input__field"
+            type="text"
+            placeholder=" "
+          />
+          <span className="input__label">Password</span>
+        </label>
+
+        <div className="button-group">
+          <button
+            className="button-group"
+            onClick={() => {
+              login();
+            }}
+          >
+            Login
+          </button>
+        </div>
+      </div>
 
       {/*sign up button*/}
-      <div>
+      {/* <div>
         <p>Not a user yet?</p>
         <Link to="/signup">Signup</Link>
-      </div>
+      </div> */}
     </div>
   );
 }
