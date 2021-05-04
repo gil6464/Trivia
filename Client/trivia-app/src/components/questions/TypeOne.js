@@ -8,11 +8,11 @@ function TypeOne({
   updateCounterIncorrect,
   setQuestionType,
   setCounter,
-  stopTimer,
+  stop,
 }) {
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(false);
-  const [showButton, setButton] = useState(false);
+  const [next, showNext] = useState(false);
 
   const getTypeOneQuestion = async () => {
     const { data } = await axios.get("/typeone");
@@ -26,15 +26,15 @@ function TypeOne({
   const correctWrapper = () => {
     correct();
     updateCounter();
-    setButton(true);
-    stopTimer(true);
+    showNext(true);
+    stop();
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
-    setButton(true);
-    stopTimer(true);
+    showNext(true);
+    stop();
   };
 
   let buttons;
@@ -46,7 +46,7 @@ function TypeOne({
 
   if (question) {
     let nextQuestion = <h1>Click above to answer</h1>;
-    if (showButton) {
+    if (next) {
       nextQuestion = (
         <CorrectAnswer
           correctAnswer={question.correct}
@@ -59,7 +59,7 @@ function TypeOne({
     }
 
     let buttonArray = [];
-    if (!showButton) {
+    if (!next) {
       for (let country of question.countries) {
         if (country.country === question.correct) {
           buttonArray.push(

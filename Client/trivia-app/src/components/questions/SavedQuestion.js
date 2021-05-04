@@ -1,16 +1,19 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import CorrectAnswer from "./CorrectAnswer";
+let nextQuestion;
 
 function SavedQuestion({
   updateCounter,
   updateCounterIncorrect,
   setQuestionType,
   setCounter,
+  stop,
+  setNum,
+  setAnswer,
 }) {
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(false);
-  const [answer, setAnswer] = useState(false);
 
   const getSavedQuestions = async () => {
     const { data } = await axios.get("/savedquestion");
@@ -20,19 +23,23 @@ function SavedQuestion({
   useEffect(() => {
     getSavedQuestions();
   }, []);
+
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const correctWrapper = () => {
     correct();
     updateCounter();
-    setQuestionType(0);
-    setAnswer(true);
+    // setQuestionType(0);
+    setNum(1);
+    stop();
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
-    setQuestionType(0);
-    setAnswer(true);
+    // setQuestionType(0);
+    setNum(2);
+    setAnswer(question.correct);
+    stop();
   };
   if (question) {
     let buttonArray = [];
@@ -70,15 +77,6 @@ function SavedQuestion({
         <h1>{question.question}</h1>
         {buttonArray}
         <div className="rating">{buttons}</div>
-        <CorrectAnswer
-          correctAnswer={answer ? question.correct : ""}
-          nextQuestion={() => {
-            setQuestionType();
-            setCounter = { setCounter };
-          }}
-          setCounter={setCounter}
-        />
-        ;
       </div>
     );
   } else {

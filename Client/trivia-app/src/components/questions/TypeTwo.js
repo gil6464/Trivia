@@ -7,6 +7,7 @@ function TypeTwo({
   updateCounterIncorrect,
   setQuestionType,
   setCounter,
+  stop,
 }) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const [question, setQuestion] = useState(undefined);
@@ -24,12 +25,14 @@ function TypeTwo({
     correct();
     updateCounter();
     setButton(true);
+    stop();
   };
 
   const inCorrectWrapper = () => {
     inCorrect();
     updateCounterIncorrect();
     setButton(true);
+    stop();
   };
   if (question) {
     let correctText;
