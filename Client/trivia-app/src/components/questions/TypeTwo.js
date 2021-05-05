@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import CorrectAnswer from "./CorrectAnswer";
+let correctText;
 
 function TypeTwo({
   updateCounter,
@@ -8,11 +8,13 @@ function TypeTwo({
   setQuestionType,
   setCounter,
   stop,
+  setAnswer,
 }) {
   //Added a wrapper to correct function since we need to use updateCounter function which passes from HOME PAGE
   const [question, setQuestion] = useState(undefined);
   const [rated, setRated] = useState(undefined);
   const [showButton, setButton] = useState(false);
+  const [next, showNext] = useState(false);
 
   const getTypeTwoQuestion = async () => {
     const { data } = await axios.get("/typetwo");
@@ -25,6 +27,8 @@ function TypeTwo({
     correct();
     updateCounter();
     setButton(true);
+    showNext(true);
+    setAnswer(undefined, 1);
     stop();
   };
 
@@ -32,28 +36,20 @@ function TypeTwo({
     inCorrect();
     updateCounterIncorrect();
     setButton(true);
+    showNext(true);
+    setAnswer(correctText, 2);
     stop();
   };
   if (question) {
-    let correctText;
     for (let country of question.countries) {
       if (country.country === question.askOn) {
         correctText = country[question.column];
       }
     }
 
-    let nextQuestion = <h1>Click above to answer</h1>;
-    if (showButton) {
-      nextQuestion = (
-        <CorrectAnswer
-          correctAnswer={correctText}
-          nextQuestion={() => {
-            setQuestionType(2);
-          }}
-          setCounter={setCounter}
-        />
-      );
-    }
+    // if (showButton) {
+
+    // }
     let buttonArray = [];
     if (!showButton) {
       for (let country of question.countries) {
@@ -78,6 +74,20 @@ function TypeTwo({
     } else {
       buttons = <h1>Thank you for rating</h1>;
     }
+    let nextButton = undefined;
+    if (next) {
+      nextButton = (
+        <button
+          onClick={() => {
+            setQuestionType(2);
+            setCounter();
+          }}
+        >
+          next question
+        </button>
+      );
+    }
+
     return (
       <div className="TypeTwo">
         <h1>
@@ -85,7 +95,7 @@ function TypeTwo({
         </h1>
         {buttonArray}
         <div className="rating">{buttons}</div>
-        {nextQuestion}
+        {nextButton}
       </div>
     );
   } else {

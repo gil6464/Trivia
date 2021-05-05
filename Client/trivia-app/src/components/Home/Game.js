@@ -11,7 +11,7 @@ function Home({ player, setPlayer }) {
   const [timer, setTimer] = useState(20);
   const [timerState, showTimer] = useState(true);
   const [text, setText] = useState("Click above to answer");
-  const [num, setNum] = useState(0);
+  const [questionCount, setQuestionCount] = useState(1);
 
   useInterval(() => {
     if (timerState) {
@@ -38,12 +38,15 @@ function Home({ player, setPlayer }) {
       return setTimer(5);
     }
   }, [count]);
-  const setAnswer = correctAnswer => {
-    if (num === 1) {
-      return setText("You are correct");
+  const setAnswer = (correctAnswer, number) => {
+    if (number === 0) {
+      setText("Click above to answer");
     }
-    if (num === 2) {
-      return setText(`The answer is ${correctAnswer}`);
+    if (number === 1) {
+      setText("You are correct");
+    }
+    if (number === 2) {
+      setText(`The answer is ${correctAnswer}`);
     }
   };
   const updateCounter = () => {
@@ -63,6 +66,8 @@ function Home({ player, setPlayer }) {
   const setCounter = () => {
     setCount(count + 1);
     showTimer(true);
+    setAnswer(undefined, 0);
+    setQuestionCount(questionCount + 1);
   };
   const updateCounterIncorrect = () => {
     setCount(count + 1);
@@ -80,6 +85,7 @@ function Home({ player, setPlayer }) {
     currentQuestion = (
       <TypeOne
         stop={stop}
+        setAnswer={setAnswer}
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
@@ -92,6 +98,7 @@ function Home({ player, setPlayer }) {
     currentQuestion = (
       <TypeTwo
         stop={stop}
+        setAnswer={setAnswer}
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
         setQuestionType={setQuestionType}
@@ -104,7 +111,6 @@ function Home({ player, setPlayer }) {
     currentQuestion = (
       <SavedQuestion
         stop={stop}
-        setNum={setNum}
         setAnswer={setAnswer}
         updateCounter={updateCounter}
         updateCounterIncorrect={updateCounterIncorrect}
@@ -113,14 +119,14 @@ function Home({ player, setPlayer }) {
       />
     );
   }
-  if (player.mistakes < 20) {
+  if (player.mistakes < 3) {
     return (
       <div id="Login">
         <h1>{player.name}</h1>
         <h3>Your Score is: {player.score}</h3>
         <h3>Correct answers: {player.correct}</h3>
         <h3>Incorrect answers: {player.mistakes}</h3>
-        <h2>question number: {player.correct + player.mistakes + 1}</h2>
+        <h2>question number: {questionCount}</h2>
         {timer}
         {currentQuestion}
         {text}

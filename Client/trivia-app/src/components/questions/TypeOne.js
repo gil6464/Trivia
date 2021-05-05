@@ -8,6 +8,7 @@ function TypeOne({
   updateCounterIncorrect,
   setQuestionType,
   setCounter,
+  setAnswer,
   stop,
 }) {
   const [question, setQuestion] = useState(undefined);
@@ -27,6 +28,7 @@ function TypeOne({
     correct();
     updateCounter();
     showNext(true);
+    setAnswer(undefined, 1);
     stop();
   };
 
@@ -34,6 +36,7 @@ function TypeOne({
     inCorrect();
     updateCounterIncorrect();
     showNext(true);
+    setAnswer(question.correct, 2);
     stop();
   };
 
@@ -45,19 +48,6 @@ function TypeOne({
   }
 
   if (question) {
-    let nextQuestion = <h1>Click above to answer</h1>;
-    if (next) {
-      nextQuestion = (
-        <CorrectAnswer
-          correctAnswer={question.correct}
-          nextQuestion={() => {
-            setQuestionType(1);
-          }}
-          setCounter={setCounter}
-        />
-      );
-    }
-
     let buttonArray = [];
     if (!next) {
       for (let country of question.countries) {
@@ -76,12 +66,25 @@ function TypeOne({
         }
       }
     }
+    let nextButton = undefined;
+    if (next) {
+      nextButton = (
+        <button
+          onClick={() => {
+            setQuestionType(1);
+            setCounter();
+          }}
+        >
+          next question
+        </button>
+      );
+    }
     return (
       <div className="TypeOne">
         <h1>{question.template}</h1>
         {buttonArray}
         <div className="rating">{buttons}</div>
-        {nextQuestion}
+        {nextButton}
       </div>
     );
   } else {
