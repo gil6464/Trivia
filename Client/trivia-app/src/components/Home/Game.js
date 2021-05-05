@@ -16,16 +16,21 @@ function Home({ player, setPlayer }) {
   useInterval(() => {
     if (timerState) {
       if (timer > 0) setTimer(timer - 1);
-      else {
+      else if (timer <= 0) {
         updateCounterIncorrect();
         if (questionType !== 2) {
           setQuestionType(questionType + 1);
         } else {
           setQuestionType(0);
         }
+        showTimer(true);
       }
     }
   }, 1000);
+
+  useEffect(() => {
+    console.log(timerState);
+  });
 
   useEffect(() => {
     const minus = player.correct / 2;
@@ -36,7 +41,7 @@ function Home({ player, setPlayer }) {
       }
       return setTimer(5);
     }
-  }, [player]);
+  }, [count]);
   const setAnswer = (correctAnswer, number) => {
     if (number === 0) {
       setText("Click above to answer");
@@ -60,7 +65,6 @@ function Home({ player, setPlayer }) {
   };
   const stop = () => {
     showTimer(false);
-    setTimer("");
   };
   const setCounter = () => {
     setCount(count + 1);
@@ -69,9 +73,8 @@ function Home({ player, setPlayer }) {
     setQuestionCount(questionCount + 1);
   };
   const updateCounterIncorrect = () => {
-    setCount(count + 1);
-    // setIncorrectCount(incorrectCount + 1);
-    setIncorrectCount();
+    // setCount(count + 1);
+    setIncorrectCount(incorrectCount + 1);
     setPlayer({
       name: player.name,
       score: player.score,
@@ -119,15 +122,15 @@ function Home({ player, setPlayer }) {
       />
     );
   }
-  if (player.mistakes < 100) {
+  if (incorrectCount < 3) {
     return (
       <div id="Login">
         <h1>{player.name}</h1>
         <h3>Your Score is: {player.score}</h3>
         <h3>Correct answers: {player.correct}</h3>
-        <h3>Incorrect answers: {player.mistakes}</h3>
+        <h3>Incorrect answers: {incorrectCount}</h3>
         <h2>question number: {questionCount}</h2>
-        {timer}
+        {timerState && timer}
         {currentQuestion}
         {text}
       </div>
