@@ -142,6 +142,8 @@ function Home({ player, setPlayer }) {
         setPlayer={setPlayer}
         setTimer={setTimer}
         setCount={setCount}
+        setIncorrectCount={setIncorrectCount}
+        setQuestionCount={setQuestionCount}
       />
     );
 }
