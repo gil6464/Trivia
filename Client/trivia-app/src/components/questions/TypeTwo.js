@@ -47,9 +47,6 @@ function TypeTwo({
       }
     }
 
-    // if (showButton) {
-
-    // }
     let buttonArray = [];
     if (!showButton) {
       for (let country of question.countries) {

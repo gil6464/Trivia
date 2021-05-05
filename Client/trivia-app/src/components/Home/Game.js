@@ -28,16 +28,15 @@ function Home({ player, setPlayer }) {
   }, 1000);
 
   useEffect(() => {
-    const minus = count / 2;
+    const minus = player.correct / 2;
     const num = 20 - minus;
     if (timerState) {
-      if (count < 30) {
-        console.log(num);
+      if (player.correct < 30) {
         return setTimer(num);
       }
       return setTimer(5);
     }
-  }, [count]);
+  }, [player]);
   const setAnswer = (correctAnswer, number) => {
     if (number === 0) {
       setText("Click above to answer");
@@ -71,7 +70,8 @@ function Home({ player, setPlayer }) {
   };
   const updateCounterIncorrect = () => {
     setCount(count + 1);
-    setIncorrectCount(incorrectCount + 1);
+    // setIncorrectCount(incorrectCount + 1);
+    setIncorrectCount();
     setPlayer({
       name: player.name,
       score: player.score,
@@ -119,7 +119,7 @@ function Home({ player, setPlayer }) {
       />
     );
   }
-  if (player.mistakes < 3) {
+  if (player.mistakes < 100) {
     return (
       <div id="Login">
         <h1>{player.name}</h1>
