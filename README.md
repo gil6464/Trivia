@@ -32,6 +32,13 @@ The scores will be arranged from the highest to the lowest.
 - Each question answered correctly earn you 100 points.
 - After the game ends, watch the leaderboard and where you are with respect to others
 
+## How to install the app on your device
+
+-Clone the code and write  in the terminal "npm install" in the root floder and in the trivia-app floder.
+-Add .env file in the root dircetory and add this variables: DB_PASSWORD="here put you password to the mysql workbrench",also add: REFRESH_TOKEN_SECRET,ACCESS_TOKEN_SECRET, and give them each any string that you like to.
+-In the terminal, in root directory, write:"npx sequelize db:migrate:all" and then:"npx sequelize db:seed:all".
+- Go to the trivia-app floder and in the terminal write "npm start", and you are ready to go! enjoy👌
+
 ### Credits
 
 This app was made by:\
