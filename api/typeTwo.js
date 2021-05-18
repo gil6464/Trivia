@@ -1,13 +1,12 @@
-const { countryMain, questiontypeone, questiontypetwo } = require("../models");
+const { countryMain, questiontypetwo } = require("../models");
 const express = require("express");
 const typeTwo = express.Router();
-const Sequelize = require("Sequelize");
 const sequelize = require("sequelize");
-const { Op } = require("sequelize");
+const { validateToken } = require("./middlewares");
 
 let countries;
 
-typeTwo.get("/", async (req, res) => {
+typeTwo.get("/", validateToken, async (req, res) => {
   const result = await questiontypetwo
     .findOne({ order: sequelize.literal("rand()") })
     .then(question => {

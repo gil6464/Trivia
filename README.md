@@ -47,3 +47,12 @@ Maor-[Maorshl](https://pages.github.com/Maorshl)\
 Gil-[gil6464](https://pages.github.com/gil6464)\
 Amit-[amitby98](https://pages.github.com/amitby98)\
 Niv-[Niv200](https://pages.github.com/Niv200)
+
+### DB
+
+To create the database:
+
+- Run `npx sequelize db:migrate`
+- Run `npx sequelize db:seed:all`
+
+* make sure all the migration worked before you perform the seeding.

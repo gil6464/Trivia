@@ -1,9 +1,8 @@
 const { countryMain, questiontypeone, questiontypetwo } = require("../models");
 const express = require("express");
 const typeOne = express.Router();
-const Sequelize = require("Sequelize");
 const sequelize = require("sequelize");
-const { Op } = require("sequelize");
+const { validateToken } = require("./middlewares");
 let countries;
 
 function findCorrect(question) {
@@ -24,7 +23,7 @@ function findCorrect(question) {
   }
 }
 
-typeOne.get("/", async (req, res) => {
+typeOne.get("/", validateToken, async (req, res) => {
   const result = await questiontypeone
     .findOne({ order: sequelize.literal("rand()") })
     .then((question) => {

@@ -1,26 +1,35 @@
 .navbarlist {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	position: fixed;
-	top: 0;
-	width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbarli {
-	float: left;
+  float: left;
 }
 
 .navbarli a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .navbarli a:hover {
-	background-color: rgb(0, 174, 255);
+  background-color: rgb(0, 174, 255);
+}
+.logout a {
+  color: red;
+}
+.loginAndSignup {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
