@@ -3,8 +3,8 @@ module.exports = {
   development: {
     username: "root",
     password: process.env.DB_PASSWORD,
-    database: "trivia",
-    host: "35.242.198.137",
+    database: "Trivia",
+    host: "127.0.0.1",
     dialect: "mysql",
   },
   test: {
@@ -17,11 +17,8 @@ module.exports = {
   production: {
     username: "root",
     password: process.env.DB_PASSWORD,
-    database: "trivia",
-    host: "35.242.198.137",
+    database: "Trivia",
+    host: "127.0.0.1",
     dialect: "mysql",
-    dialectOptions: {
-      socketPath: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
-    },
   },
 };
