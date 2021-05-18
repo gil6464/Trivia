@@ -29,10 +29,6 @@ function Home({ player, setPlayer }) {
   }, 1000);
 
   useEffect(() => {
-    console.log(timerState);
-  });
-
-  useEffect(() => {
     const minus = player.correct / 2;
     const num = 20 - minus;
     if (timerState) {
@@ -58,7 +54,8 @@ function Home({ player, setPlayer }) {
       name: player.name,
       score:
         player.score +
-        ((1 - (20 - count * 0.5 - timer) / (20 - count * 0.5)) * 70 + 30),
+        ((1 - (20 - player.correct * 0.5 - timer) / (20 - count * 0.5)) * 70 +
+          30),
       correct: player.correct + 1,
       mistakes: player.mistakes,
     });
@@ -73,7 +70,6 @@ function Home({ player, setPlayer }) {
     setQuestionCount(questionCount + 1);
   };
   const updateCounterIncorrect = () => {
-    // setCount(count + 1);
     setIncorrectCount(incorrectCount + 1);
     setPlayer({
       name: player.name,
