@@ -34,18 +34,17 @@ The scores will be arranged from the highest to the lowest.
 
 ## How to install the app on your device
 
-- Clone the code and write  in the terminal "npm install" in the root floder and in the client/trivia-app floder.
+- Clone the code and write  in the terminal "npm install" in the root folder and in the client/trivia-app folder.
 - Add .env file in the root dircetory and add this variables: DB_PASSWORD="here put you password to the mysql workbrench",also add: REFRESH_TOKEN_SECRET,ACCESS_TOKEN_SECRET, and give them each any string that you like to.
 - Make sure that you have schema called "trivia" in your mysql workbrench
 - In the terminal, in root directory, write:"npx sequelize db:migrate:all" and then:"npx sequelize db:seed:all".
 - In the root directory, open the terminal and write "node index.js".
--  Go to the client/trivia-app floder and in the terminal write "npm start", and you are ready to go! enjoy👌
+-  Go to the client/trivia-app folder and in the terminal write "npm start", and you are ready to go! enjoy👌
 
 ### Credits
 
 This app was made by:\
 Maor-[Maorshl](https://pages.github.com/Maorshl)\
 Gil-[gil6464](https://pages.github.com/gil6464)\
-Amit-[amitby98](https://pages.github.com/amitby98)\
 Niv-[Niv200](https://pages.github.com/Niv200)
 
